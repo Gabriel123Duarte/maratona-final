@@ -10,7 +10,7 @@
 - [TRAFFICN]() | [Traffic Network](http://www.spoj.com/problems/TRAFFICN/)
 - [52C]() | [Circular RMQ](http://codeforces.com/problemset/problem/52/C)
 - [580D]() | [Kefa and Dishes](http://codeforces.com/problemset/problem/580/D)
-- [7312]() | [Cookie Balancing Act](https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&page=show_problem&problem=5334)
+- [7312](7312Gabriel.cpp) | [Cookie Balancing Act](https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&page=show_problem&problem=5334)
 - [1475]() | [Remendo](https://www.urionlinejudge.com.br/judge/pt/problems/view/1475)
 - [698A]() | [Vacations](http://codeforces.com/problemset/problem/698/A)
 - [SAMER08A]() | [Almost Shortest Path](http://www.spoj.com/problems/SAMER08A/)
