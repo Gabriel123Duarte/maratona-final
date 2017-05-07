@@ -6,7 +6,7 @@
 - [Gabriel](1203Gabriel.cpp) | [Gustavo](1203Gustavo.cpp) | [Pontes de São Petersburgo](https://www.urionlinejudge.com.br/judge/pt/problems/view/1203)
 - [Gabriel](1301Gabriel.cpp) | [Produto do Intervalo](https://www.urionlinejudge.com.br/judge/pt/problems/view/1301)
 - [Gabriel](1804Gabriel.cpp) | [Gustavo](1804Gustavo.cpp) | [Precisa-se de Matemáticos em Marte](https://www.urionlinejudge.com.br/judge/pt/problems/view/1804)
-- | [Potentiometers](https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=3238)
+- [Gabriel](12086Gabriel.cpp) | [Potentiometers](https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=3238)
 - [Gabriel](TRAFFICN-Gabriel.cpp) | [Traffic Network](http://www.spoj.com/problems/TRAFFICN/)
 - [Gabriel](52CGabriel.cpp) | [Circular RMQ](http://codeforces.com/problemset/problem/52/C)
 - | [Kefa and Dishes](http://codeforces.com/problemset/problem/580/D)
