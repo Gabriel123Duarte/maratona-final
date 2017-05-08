@@ -1,7 +1,7 @@
 # IV Escola de Inverno da Unifei
 
 ## Intermediário - Dia 2
-- [EDIST]() | [Edit distance](http://www.spoj.com/problems/EDIST/)
+- [Gabriel](EDIST-Gabriel.cpp) | [Edit distance](http://www.spoj.com/problems/EDIST/)
 - [1799]() | [O Rato no Labirinto](https://www.urionlinejudge.com.br/judge/pt/problems/view/1799)
 - [1513]() | [Cavalo](https://www.urionlinejudge.com.br/judge/pt/problems/view/1513)
 - [546D]() | [Soldier and Number Game](http://codeforces.com/problemset/problem/546/D)
