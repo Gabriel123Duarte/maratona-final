@@ -8,7 +8,7 @@
 - [Gabriel](1804Gabriel.cpp) | [Gustavo](1804Gustavo.cpp) | [Precisa-se de Matemáticos em Marte](https://www.urionlinejudge.com.br/judge/pt/problems/view/1804)
 - [Gabriel](12086Gabriel.cpp) | [Potentiometers](https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=3238)
 - [Gabriel](TRAFFICN-Gabriel.cpp) | [Traffic Network](http://www.spoj.com/problems/TRAFFICN/)
-- [Gabriel](52CGabriel.cpp) | [Circular RMQ](http://codeforces.com/problemset/problem/52/C)
+- [Gabriel](52CGabriel.cpp) | [Gustavo](52CGustavo.cpp) | [Circular RMQ](http://codeforces.com/problemset/problem/52/C)
 - [Gabriel](580DGabriel.cpp) | [Kefa and Dishes](http://codeforces.com/problemset/problem/580/D)
 - [Gabriel](7312Gabriel.cpp) | [Gustavo](7312Gustavo.cpp) | [Cookie Balancing Act](https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&page=show_problem&problem=5334)
 - [Gabriel](1475Gabriel.cpp) | [Remendo](https://www.urionlinejudge.com.br/judge/pt/problems/view/1475)
