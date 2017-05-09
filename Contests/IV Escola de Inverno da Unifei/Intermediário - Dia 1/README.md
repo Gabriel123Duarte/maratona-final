@@ -4,7 +4,7 @@
 - [Gabriel](50BGabriel.cpp) | [Gustavo](50BGustavo.cpp) | [Choosing Symbol Pairs](http://codeforces.com/problemset/problem/50/B)
 - [Gabriel](1128Gabriel.cpp) | [Ir e Vir](https://www.urionlinejudge.com.br/judge/pt/problems/view/1128)
 - [Gabriel](1203Gabriel.cpp) | [Gustavo](1203Gustavo.cpp) | [Pontes de São Petersburgo](https://www.urionlinejudge.com.br/judge/pt/problems/view/1203)
-- [Gabriel](1301Gabriel.cpp) | [Produto do Intervalo](https://www.urionlinejudge.com.br/judge/pt/problems/view/1301)
+- [Gabriel](1301Gabriel.cpp) | [Gustavo](1301Gustavo.cpp) | [Produto do Intervalo](https://www.urionlinejudge.com.br/judge/pt/problems/view/1301)
 - [Gabriel](1804Gabriel.cpp) | [Gustavo](1804Gustavo.cpp) | [Precisa-se de Matemáticos em Marte](https://www.urionlinejudge.com.br/judge/pt/problems/view/1804)
 - [Gabriel](12086Gabriel.cpp) | [Potentiometers](https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=3238)
 - [Gabriel](TRAFFICN-Gabriel.cpp) | [Traffic Network](http://www.spoj.com/problems/TRAFFICN/)
