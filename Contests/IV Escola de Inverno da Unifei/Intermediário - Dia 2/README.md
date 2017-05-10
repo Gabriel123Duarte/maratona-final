@@ -3,7 +3,7 @@
 ## Intermediário - Dia 2
 - [Gabriel](EDIST-Gabriel.cpp) | [Edit distance](http://www.spoj.com/problems/EDIST/)
 - [Gabriel](1799Gabriel.cpp) | [O Rato no Labirinto](https://www.urionlinejudge.com.br/judge/pt/problems/view/1799)
-- [1513]() | [Cavalo](https://www.urionlinejudge.com.br/judge/pt/problems/view/1513)
+- [Gabriel](1513Gabriel.cpp) | [Cavalo](https://www.urionlinejudge.com.br/judge/pt/problems/view/1513)
 - [546D]() | [Soldier and Number Game](http://codeforces.com/problemset/problem/546/D)
 - [Gabriel](1500Gabriel.cpp) | [Consultas Horríveis](https://www.urionlinejudge.com.br/judge/pt/problems/view/1500)
 - [547B]() | [Mike and Feet](http://codeforces.com/problemset/problem/547/B)
