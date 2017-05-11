@@ -12,5 +12,5 @@
 - [Gabriel](580DGabriel.cpp) | [Kefa and Dishes](http://codeforces.com/problemset/problem/580/D)
 - [Gabriel](7312Gabriel.cpp) | [Gustavo](7312Gustavo.cpp) | [Cookie Balancing Act](https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&page=show_problem&problem=5334)
 - [Gabriel](1475Gabriel.cpp) | [Remendo](https://www.urionlinejudge.com.br/judge/pt/problems/view/1475)
-- [Gabriel](698A.cpp) | [Vacations](http://codeforces.com/problemset/problem/698/A)
+- [Gabriel](698A.cpp) | [Gustavo](698AGustavo.cpp) | [Vacations](http://codeforces.com/problemset/problem/698/A)
 - [Gabriel](1391Gabriel.cpp) | [Almost Shortest Path](http://www.spoj.com/problems/SAMER08A/)
