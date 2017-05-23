@@ -5,7 +5,7 @@
 - [6274]() | [Idol](https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&page=show_problem&problem=4285)
 - [5066]() | [Fire Drill](https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&page=show_problem&problem=3067)
 - [5061]() | [Lightning Energy Report](https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&page=show_problem&problem=3062)
-- [6437]() | [Power Plant](https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&page=show_problem&problem=4448)
+- [Gabriel](6437-Gabriel.cpp) | [Power Plant](https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&page=show_problem&problem=4448)
 - [2196]() | [Multiplication](https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&page=show_problem&problem=197)
 - [4205]() | [Clicking Checkboxes](https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&page=show_problem&problem=2206)
 - [5064]() | [Serial Numbers](https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&page=show_problem&problem=3065)
