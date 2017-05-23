@@ -12,5 +12,5 @@
 - [617E]() | [XOR and Favorite Number](http://codeforces.com/problemset/problem/617/E)
 - [650B]() | [Image Preview](http://codeforces.com/problemset/problem/650/B)
 - [106E]() | [Space Rescuers](http://codeforces.com/problemset/problem/106/E)
-- [Gabriel](KQUERYO-Gabriel.cpp) | [K-Query Online](http://www.spoj.com/problems/KQUERYO/)
+- [Gabriel](KQUERYO-Gabriel.cpp) | [Gustavo](KQUERYO-Gustavo.cpp) | [K-Query Online](http://www.spoj.com/problems/KQUERYO/)
 
