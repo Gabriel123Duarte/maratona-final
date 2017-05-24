@@ -128,7 +128,7 @@ int main(){
 			insert(s);
 			zero |= s == "0";
 		}
-
+		aho();
 		int n;
 		scanf("%d", &n);
 		bool first = 1;
