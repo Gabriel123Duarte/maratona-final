@@ -3,7 +3,7 @@
 ## Avançado - Dia 1
 - [QTREE5]() | [Query on a tree V](http://www.spoj.com/problems/QTREE5/)
 - [6274]() | [Idol](https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&page=show_problem&problem=4285)
-- [5066]() | [Fire Drill](https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&page=show_problem&problem=3067)
+- [Gabriel](5066-Gabriel.cpp) | [Fire Drill](https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&page=show_problem&problem=3067)
 - [Gabriel](5061-Gabriel.cpp) | [Lightning Energy Report](https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&page=show_problem&problem=3062)
 - [Gabriel](6437-Gabriel.cpp) | [Power Plant](https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&page=show_problem&problem=4448)
 - [2196]() | [Multiplication](https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&page=show_problem&problem=197)
