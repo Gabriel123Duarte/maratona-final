@@ -14,3 +14,5 @@
 - [106E]() | [Space Rescuers](http://codeforces.com/problemset/problem/106/E)
 - [Gabriel](KQUERYO-Gabriel.cpp) | [Gustavo](KQUERYO-Gustavo.cpp) | [K-Query Online](http://www.spoj.com/problems/KQUERYO/)
 
+Placar oficial do dia:
+https://a2oj.com/standings?ID=26893

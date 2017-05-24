@@ -14,3 +14,6 @@
 - [Gabriel](1475Gabriel.cpp) | [Remendo](https://www.urionlinejudge.com.br/judge/pt/problems/view/1475)
 - [Gabriel](698A.cpp) | [Gustavo](698AGustavo.cpp) | [Vacations](http://codeforces.com/problemset/problem/698/A)
 - [Gabriel](1391Gabriel.cpp) | [Almost Shortest Path](http://www.spoj.com/problems/SAMER08A/)
+
+Placar oficial do dia: 
+https://a2oj.com/standings?ID=26909
