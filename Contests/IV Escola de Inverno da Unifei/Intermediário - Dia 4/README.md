@@ -11,3 +11,5 @@
 - [10003]() | [Cutting Sticks](https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=944)
 - [10330]() | [Power Transmission](https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1271)
 
+Placar oficial do dia:
+https://www.codepit.io/#/contest/57997e8b90279d180007b79a/view

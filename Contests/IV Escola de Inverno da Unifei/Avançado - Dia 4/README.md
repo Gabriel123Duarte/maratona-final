@@ -13,3 +13,5 @@
 - [3931]() | [Emoticons :-)](https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&page=show_problem&problem=1932)
 - [3932]() | [Finding Seats](https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&page=show_problem&problem=1933)
 
+Placar oficial do dia:
+https://www.codepit.io/#/contest/579974d790279d180007b799/view
