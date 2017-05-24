@@ -1,5 +1,5 @@
 /*input
-4
+5
 1 4
 2 3 5
 1 2
@@ -8,6 +8,8 @@
 3 4 13 888
 3 012 345 6789
 2 12345 67890
+4 01 0 24 123
+4 24 1000 123 200
 */
 
 #include <bits/stdc++.h>
@@ -17,7 +19,7 @@ using namespace std;
 #define fst first
 #define snd second
 #define debug(x) cout << #x << " = " << x << endl;
-typedef long long ll;
+typedef unsigned long long ll;
 typedef pair<int, int> ii;
 
 #define MAXN 110
@@ -28,6 +30,7 @@ int term[MAXN];
 int failure[MAXN];
 int cnt;
 ll dp[20][MAXN][2][2];
+int vis[20][MAXN][2][2];
 
 void insert(string s){
 	int node = 0;
@@ -71,6 +74,7 @@ int next(int node, int c){
 	return trie[node][c];
 }
 
+
 string toString(ll x){
 	stringstream ss;
 	ss << x;
@@ -85,8 +89,9 @@ ll solve(int id, int node, int pref, int leftZero){
 		return 1;
 	
 	ll &ans = dp[id][node][pref][leftZero];
-	if(ans != -1)
+	if(vis[id][node][pref][leftZero])
 		return ans;
+	vis[id][node][pref][leftZero] = 1;
 	ans = 0;
 	
 	for(int i = 0; i < ALPHA; i++){
@@ -120,13 +125,13 @@ int main(){
 		memset(trie, 0, sizeof trie);
 		memset(term, 0, sizeof term);
 		memset(failure, 0, sizeof failure);
+		memset(vis, 0, sizeof vis);
 		cnt = 1;
-		int zero = 0;
+
 		while(k--){
 			scanf("%s", aux);
 			s = string(aux);
 			insert(s);
-			zero |= s == "0";
 		}
 		aho();
 		int n;
@@ -140,21 +145,30 @@ int main(){
 			while(l <= r){
 				ll mid = (l+r)/2;
 				str = toString(mid);
-				memset(dp, -1, sizeof dp);
-				ll aux = solve(0, 0, 1, 1) - zero;
+				memset(vis, 0, sizeof vis);
+				ll aux = solve(0, 0, 1, 1);
 				if(aux < num)
 					l = mid+1;
-				else if(aux > num)
+				else if(aux >= num){
 					r = mid-1;
-				else{
 					ans = mid;
-					break;
 				}
 			}
 
 			if(!first)
 				printf(" ");
 			first = 0;
+			ll x = ans - 1;
+			while(1){
+				str = toString(x);
+				memset(vis, 0, sizeof vis);
+				ll aux = solve(0, 0, 1, 1);
+				if(aux != num)
+					break;
+				else
+					ans = x;
+				x--;
+			}
 			printf("%lld", ans);
 		}
 		puts("");
