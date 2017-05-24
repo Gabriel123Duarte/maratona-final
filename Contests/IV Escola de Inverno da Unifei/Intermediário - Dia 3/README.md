@@ -1,18 +1,20 @@
 # IV Escola de Inverno da Unifei
 
-## Intermediário - Dia 3
-- [Gabriel](FARIDA-Gabriel.cpp) | [Princess Farida](http://www.spoj.com/problems/FARIDA/)
-- [Gabriel](1123-Gabriel.cpp) | [Gustavo](1123Gustavo.cpp) | [Desvio de Rota](https://www.urionlinejudge.com.br/judge/pt/problems/view/1123)
-- [466C]() | [Number of Ways](http://codeforces.com/problemset/problem/466/C)
-- [1549]() | [Dividindo a Coca](https://www.urionlinejudge.com.br/judge/pt/problems/view/1549)
-- [793]() | [Network Connections](https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=734)
-- [527C]() | [Glass Carving](http://codeforces.com/problemset/problem/527/C)
-- [TRT]() | [Treats for the Cows](http://www.spoj.com/problems/TRT/)
-- [ENERGIA]() | [Transmisssão de Energia](http://br.spoj.com/problems/ENERGIA/)
-- [1527]() | [Guildas](https://www.urionlinejudge.com.br/judge/pt/problems/view/1527)
-- [1152]() | [Estradas Escuras](https://www.urionlinejudge.com.br/judge/pt/problems/view/1152)
-- [245H]() | [Queries for Number of Palindromes](http://codeforces.com/problemset/problem/245/H)
-- [820]() | [Internet Bandwidth](https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=761)
+## Intermediário - Dia 3 
+Problemas | Gabriel | Gustavo
+--------- | ------ | ------:
+[Princess Farida](http://www.spoj.com/problems/FARIDA/) | [:balloon:](FARIDA-Gabriel.cpp) |
+[Desvio de Rota](https://www.urionlinejudge.com.br/judge/pt/problems/view/1123) | [:balloon:](1123-Gabriel.cpp) | [:balloon:](1123Gustavo.cpp) | |
+[Number of Ways](http://codeforces.com/problemset/problem/466/C) | |
+[Dividindo a Coca](https://www.urionlinejudge.com.br/judge/pt/problems/view/1549) | |
+[Network Connections](https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=734) | |
+[Glass Carving](http://codeforces.com/problemset/problem/527/C) | |
+[Treats for the Cows](http://www.spoj.com/problems/TRT/) | |
+[Transmisssão de Energia](http://br.spoj.com/problems/ENERGIA/) | |
+[Guildas](https://www.urionlinejudge.com.br/judge/pt/problems/view/1527) | |
+[Estradas Escuras](https://www.urionlinejudge.com.br/judge/pt/problems/view/1152) | |
+[Queries for Number of Palindromes](http://codeforces.com/problemset/problem/245/H) | |
+[Internet Bandwidth](https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=761) | |
 
 Placar oficial do dia:
 https://www.codepit.io/#/contest/579827df0ffbe61800daf008/view
