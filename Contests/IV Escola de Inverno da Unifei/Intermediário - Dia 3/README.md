@@ -14,7 +14,7 @@ Problemas | Gabriel | Gustavo
 [Guildas](https://www.urionlinejudge.com.br/judge/pt/problems/view/1527) | |
 [Estradas Escuras](https://www.urionlinejudge.com.br/judge/pt/problems/view/1152) | |
 [Queries for Number of Palindromes](http://codeforces.com/problemset/problem/245/H) | |
-[Internet Bandwidth](https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=761) | |
+[Internet Bandwidth](https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=761) | [:balloon:](820-Gabriel.cpp) |
 
 Placar oficial do dia:
 https://www.codepit.io/#/contest/579827df0ffbe61800daf008/view
