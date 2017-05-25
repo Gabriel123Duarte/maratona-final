@@ -7,7 +7,7 @@ Problemas | Gabriel | Gustavo
 [Desvio de Rota](https://www.urionlinejudge.com.br/judge/pt/problems/view/1123) | [:balloon:](1123-Gabriel.cpp) | [:balloon:](1123Gustavo.cpp) | |
 [Number of Ways](http://codeforces.com/problemset/problem/466/C) | |
 [Dividindo a Coca](https://www.urionlinejudge.com.br/judge/pt/problems/view/1549) | |
-[Network Connections](https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=734) | |
+[Network Connections](https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=734) | [:balloon:](793-Gabriel.cpp) |
 [Glass Carving](http://codeforces.com/problemset/problem/527/C) | |
 [Treats for the Cows](http://www.spoj.com/problems/TRT/) | [:balloon:](TRT-Gabriel.cpp) |
 [Transmisssão de Energia](http://br.spoj.com/problems/ENERGIA/) | [:balloon:](ENERGIA-Gabriel.cpp) |
