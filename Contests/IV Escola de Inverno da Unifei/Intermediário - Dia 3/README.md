@@ -9,7 +9,7 @@ Problemas | Gabriel | Gustavo
 [Dividindo a Coca](https://www.urionlinejudge.com.br/judge/pt/problems/view/1549) | |
 [Network Connections](https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=734) | |
 [Glass Carving](http://codeforces.com/problemset/problem/527/C) | |
-[Treats for the Cows](http://www.spoj.com/problems/TRT/) | |
+[Treats for the Cows](http://www.spoj.com/problems/TRT/) | [:balloon:](TRT-Gabriel.cpp) |
 [Transmisssão de Energia](http://br.spoj.com/problems/ENERGIA/) | |
 [Guildas](https://www.urionlinejudge.com.br/judge/pt/problems/view/1527) | |
 [Estradas Escuras](https://www.urionlinejudge.com.br/judge/pt/problems/view/1152) | |
