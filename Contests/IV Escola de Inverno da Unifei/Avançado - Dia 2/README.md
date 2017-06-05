@@ -13,6 +13,6 @@ Problemas | Gabriel | Gustavo
 [Pasti Pas!](https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&page=show_problem&problem=4450) | |
 [Query on a tree](http://www.spoj.com/problems/QTREE/) | |
 [The Road to Berland is Paved With Good Intentions](http://codeforces.com/problemset/problem/228/E) | |
-[Paint the Roads](https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&page=show_problem&problem=198) | |
+[Paint the Roads](https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&page=show_problem&problem=198) | [:balloon:](2197-Gabriel.cpp) |
 [Table](http://codeforces.com/problemset/problem/232/B) | |
 
