@@ -33,6 +33,7 @@ int main(){
 		sort(all(v), greater<ii>());
 		int w = 1<<30, h = 1<<30;
 		int ans = 1;
+		
 		for(int i = 0; i < n; i++){
 			if(!(v[i].fst < w && v[i].snd < h))
 				ans++;

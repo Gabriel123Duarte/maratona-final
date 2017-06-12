@@ -6,7 +6,7 @@ Problemas | Gabriel | Gustavo
 [Itinerário do Papai Noel](https://www.urionlinejudge.com.br/judge/pt/problems/view/1764) | [:balloon:](1764-Gabriel.cpp) |
 [How do you add?](https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1884) | [:balloon:](10943-Gabriel.cpp) |
 [Nested Dolls](https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=2353) | [:x:](10943-Gabriel.cpp) |
-[Kefa and Company](http://codeforces.com/problemset/problem/580/B) | |
+[Kefa and Company](http://codeforces.com/problemset/problem/580/B) | [:balloon:](580B-Gabriel.cpp) |
 [Taxa de Divisão de Terreno](https://www.urionlinejudge.com.br/judge/pt/problems/view/1359) | |
 [Ônibus](https://www.urionlinejudge.com.br/judge/pt/problems/view/1474) | |
 [Ilya and Escalator](http://codeforces.com/problemset/problem/518/D) | |
