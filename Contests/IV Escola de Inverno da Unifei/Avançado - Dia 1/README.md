@@ -8,7 +8,7 @@ Problemas | Gabriel | Gustavo
 [Idol](https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&page=show_problem&problem=4285)   | [:x:](6274-Gabriel.cpp) | 
 [Fire Drill](https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&page=show_problem&problem=3067)  | [:balloon:](5066-Gabriel.cpp) | 
 [Lightning Energy Report](https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&page=show_problem&problem=3062) | [:balloon:](5061-Gabriel.cpp) |
-[Power Plant](https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&page=show_problem&problem=4448) | [:balloon:](6437-Gabriel.cpp) | 
+[Power Plant](https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&page=show_problem&problem=4448) | [:balloon:](6437-Gabriel.cpp) | [:balloon:](6437-Gustavo.cpp) 
 [Multiplication](https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&page=show_problem&problem=197) |  | 
 [Clicking Checkboxes](https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&page=show_problem&problem=2206) | [:balloon:](4205-Gabriel.cpp) | 
 [Serial Numbers](https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&page=show_problem&problem=3065) | [:balloon:](5064-Gabriel.cpp) | 
