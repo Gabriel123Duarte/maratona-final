@@ -6,7 +6,7 @@ Problemas | Gabriel | Gustavo
 [Princess Farida](http://www.spoj.com/problems/FARIDA/) | [:balloon:](FARIDA-Gabriel.cpp) |
 [Desvio de Rota](https://www.urionlinejudge.com.br/judge/pt/problems/view/1123) | [:balloon:](1123-Gabriel.cpp) | [:balloon:](1123Gustavo.cpp) |
 [Number of Ways](http://codeforces.com/problemset/problem/466/C) | [:balloon:](466C-Gabriel.cpp) |
-[Dividindo a Coca](https://www.urionlinejudge.com.br/judge/pt/problems/view/1549) | |
+[Dividindo a Coca](https://www.urionlinejudge.com.br/judge/pt/problems/view/1549) | [:balloon:](1549-Gabriel.cpp) |
 [Network Connections](https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=734) | [:balloon:](793-Gabriel.cpp) |
 [Glass Carving](http://codeforces.com/problemset/problem/527/C) | |
 [Treats for the Cows](http://www.spoj.com/problems/TRT/) | [:balloon:](TRT-Gabriel.cpp) |
