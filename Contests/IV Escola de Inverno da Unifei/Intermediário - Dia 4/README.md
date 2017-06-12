@@ -3,9 +3,9 @@
 ## Intermediário - Dia 4
 Problemas | Gabriel | Gustavo
 --------- | ------ | ------:
-[Itinerário do Papai Noel](https://www.urionlinejudge.com.br/judge/pt/problems/view/1764) | |
-[How do you add?](https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1884) | |
-[Nested Dolls](https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=2353) | |
+[Itinerário do Papai Noel](https://www.urionlinejudge.com.br/judge/pt/problems/view/1764) | [:balloon:](1764-Gabriel.cpp) |
+[How do you add?](https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1884) | [:balloon:](10943-Gabriel.cpp) |
+[Nested Dolls](https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=2353) | [:x:](10943-Gabriel.cpp) |
 [Kefa and Company](http://codeforces.com/problemset/problem/580/B) | |
 [Taxa de Divisão de Terreno](https://www.urionlinejudge.com.br/judge/pt/problems/view/1359) | |
 [Ônibus](https://www.urionlinejudge.com.br/judge/pt/problems/view/1474) | |
