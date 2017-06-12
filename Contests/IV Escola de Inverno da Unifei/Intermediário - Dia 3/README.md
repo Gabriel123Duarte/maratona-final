@@ -13,7 +13,7 @@ Problemas | Gabriel | Gustavo
 [Transmisssão de Energia](http://br.spoj.com/problems/ENERGIA/) | [:balloon:](ENERGIA-Gabriel.cpp) |
 [Guildas](https://www.urionlinejudge.com.br/judge/pt/problems/view/1527) | |
 [Estradas Escuras](https://www.urionlinejudge.com.br/judge/pt/problems/view/1152) | |
-[Queries for Number of Palindromes](http://codeforces.com/problemset/problem/245/H) | |
+[Queries for Number of Palindromes](http://codeforces.com/problemset/problem/245/H) | [:balloon:](245H-Gabriel.cpp) |
 [Internet Bandwidth](https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=761) | [:balloon:](820-Gabriel.cpp) |
 
 Placar oficial do dia:
