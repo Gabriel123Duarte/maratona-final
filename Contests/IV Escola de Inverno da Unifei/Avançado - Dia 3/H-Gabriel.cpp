@@ -1,9 +1,5 @@
 /*input
-2 
-SuperGame::PROGRAM 1 
-SuperServer42::PROGRAM 
-SuperServer42::PROGRAM 1 
-SuperServer42::PROGRAM 
+2 SuperGame::PROGRAM 0 HelpPackage::HelpFunction 2 HelpPackage::HelpFunction SuperGame::PROGRAM
 */
 
 #include <bits/stdc++.h>
@@ -26,6 +22,17 @@ void dfs(int u){
 			dfs(v);
 }
 
+bool test(string s){
+	string aux = "::PROGRAM";
+	if(s.size() < aux.size())
+		return false;
+	for(int i = s.size()-1, j = aux.size()-1; j >= 0; i--, j--)
+		if(aux[j] != s[i])
+			return false;
+	return true;
+}
+
+
 int main(){
 	int n;
 	cin >> n;
@@ -41,7 +48,7 @@ int main(){
 
 		if(mp.find(s) == mp.end())
 			mp[s] = idx++;
-		if(s.find("PROGRAM") != string::npos)
+		if(test(s))
 			starts.pb(mp[s]);
 
 		while(total--){
@@ -49,9 +56,9 @@ int main(){
 			
 			if(mp.find(s2) == mp.end())
 				mp[s2] = idx++;
-			//if(s2.find("PROGRAM") != string::npos)
-			//	starts.pb(mp[s2]);
-			
+			if(test(s2))
+				starts.pb(mp[s2]);
+
 			graph[mp[s2]].pb(mp[s]);
 
 		}
