@@ -1,5 +1,6 @@
 /*input
-4 1 1 1 2 0 1 1 
+6 0 1 2 2 4 5 1 2 0 0 	
+4 1 1 1 2 0 1 1 	
 */
 
 #include <bits/stdc++.h>
@@ -12,51 +13,44 @@ using namespace std;
 typedef long long ll;
 typedef pair<int, int> ii;
 
-int n, total;
-vector<int> graph[1010], vis, degree;
+#define MAXN 1010
+int n;
+vector<int> graph[2*MAXN];
+vector<int> vis, match;
 
-void dfs(int u){
-	if(vis[u])
-		return;
-	vis[u] = 1;
-	total++;
+int dfs(int l){
+	if(vis[l])
+		return 0;
+	vis[l] = 1;
 
-	for(auto v : graph[u]){
-		if(!vis[v]){
-			for(auto x : graph[v])
-				degree[x]--;
-			dfs(v);
-			break;
+	for(auto r : graph[l]){
+		if(match[r] == -1 || dfs(match[r])){
+			match[r] = l;
+			return 1;
 		}
 	}
+	return 0;
 }
 
 int main(){
 	cin >> n;
 	int k, x;
 
-	degree.assign(n, 0);
-	vis.assign(n, 0);	
 	for(int i = 0; i < n; i++){
 		cin >> k;
 		while(k--){
 			cin >> x;
-			graph[i].pb(x);
-			degree[x]++;
+			graph[i].pb(x + n);
 		}
 	}
 
-	int ans = 0;
-	total = 0;
-	while(total != n){
-		for(int i = 0; i < n; i++)
-			if(!degree[i] && !vis[i]){
-				//printf("Indo %d\n", i);
-				ans++;
-				dfs(i);
-			}
+	int mcmb = 0;	
+	match.assign(2*n, -1);
+	for(int i = 0; i < n; i++){
+		vis.assign(2*n, 0);
+		mcmb += dfs(i);
 	}
 
-	printf("%d\n", ans);
+	printf("%d\n", n-mcmb);
 	return 0;
 }
