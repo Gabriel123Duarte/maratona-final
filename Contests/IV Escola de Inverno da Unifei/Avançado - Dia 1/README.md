@@ -4,7 +4,7 @@
 
 Problemas | Gabriel | Gustavo
 --------- | ------ | ------:
-[Query on a tree V](http://www.spoj.com/problems/QTREE5/)   |  |
+[Query on a tree V](http://www.spoj.com/problems/QTREE5/)   | [:balloon:](QTREE5-Gabriel.cpp) |
 [Idol](https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&page=show_problem&problem=4285)   | [:x:](6274-Gabriel.cpp) | 
 [Fire Drill](https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&page=show_problem&problem=3067)  | [:balloon:](5066-Gabriel.cpp) | 
 [Lightning Energy Report](https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&page=show_problem&problem=3062) | [:balloon:](5061-Gabriel.cpp) |
