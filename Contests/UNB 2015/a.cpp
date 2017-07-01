@@ -2,31 +2,6 @@
 pedra pedra pedra
 pedra pedra papel
 pedra pedra tesoura
-pedra papel pedra
-pedra papel papel
-pedra papel tesoura
-pedra tesoura pedra
-pedra tesoura papel
-pedra tesoura tesoura
-papel pedra pedra
-papel pedra papel
-papel pedra tesoura
-papel papel pedra
-papel papel papel
-papel papel tesoura
-papel tesoura pedra
-papel tesoura papel
-papel tesoura tesoura
-tesoura pedra pedra
-tesoura pedra papel
-tesoura pedra tesoura
-tesoura papel pedra
-tesoura papel papel
-tesoura papel tesoura
-tesoura tesoura pedra
-tesoura tesoura papel
-tesoura tesoura tesoura
-
 */
 
 #include <bits/stdc++.h>
