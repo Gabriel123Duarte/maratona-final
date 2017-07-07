@@ -9,9 +9,9 @@ Problemas | Gabriel | Gustavo
 [Little Pony and Harmony Chest](http://codeforces.com/problemset/problem/453/B) | [:balloon:](453B-Gabriel.cpp) |
 [Delivery Bears](http://codeforces.com/problemset/problem/653/D) | |
 [Movie collection](https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&page=show_problem&problem=3913) | [:x:](5902-Gabriel.cpp) | 
-[Purification](http://codeforces.com/problemset/problem/329/A) | [:balloon:](329A-Gabriel.cpp) |
+[Purification](http://codeforces.com/problemset/problem/329/A) | [:balloon:](329A-Gabriel.cpp) | 
 [Pasti Pas!](https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&page=show_problem&problem=4450) | |
-[Query on a tree](http://www.spoj.com/problems/QTREE/) | [:balloon:](QTREE-Gabriel.cpp)|
+[Query on a tree](http://www.spoj.com/problems/QTREE/) | [:balloon:](QTREE-Gabriel.cpp)| [:x:](QTREE-Gustavo.cpp)
 [The Road to Berland is Paved With Good Intentions](http://codeforces.com/problemset/problem/228/E) | |
 [Paint the Roads](https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&page=show_problem&problem=198) | [:balloon:](2197-Gabriel.cpp) |
 [Table](http://codeforces.com/problemset/problem/232/B) | |
