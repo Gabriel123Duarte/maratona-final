@@ -16,11 +16,15 @@ using namespace std;
 typedef long long ll;
 typedef pair<int, int> ii;
 
-#define LIM 45000
 int n;
 int v[110];
-int dp[101][45000];
-int maxi = 0;
+int dp[101][45123];
+int maxi;
+
+int solve(int id, int sum){
+	if(id == n)
+		return 
+}
 
 int main(){
 	int t;
