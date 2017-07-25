@@ -1,0 +1,56 @@
+\chapter{Grafos}
+
+\section{Ford Fulkerson}
+
+Encontra o fluxo máximo em $O(|\textit{f*}|E)$.
+\begin{multicols}{2}
+	\begin{lstlisting}
+#define MAXN 100000
+struct node{
+	int v, f, c;
+	node(){}
+	node(int _v, int _f, int _c){
+		v = _v, f = _f, c = _c;
+	}
+};
+
+vector<node> edges;
+vector<int> graph[MAXN];
+int vis[MAXN];
+int cnt;
+
+void add(int u, int v, int c){
+	edges.pb(node(v, 0, c));
+	graph[u].pb(edges.size()-1);
+	edges.pb(node(u, 0, 0));
+	graph[v].pb(edges.size()-1);
+}
+
+int dfs(int s, int t, int f){
+	if(s == t)
+	return f;
+	vis[s] = cnt;
+	for(auto e : graph[s]){
+		if(vis[edges[e].v] < cnt && edges[e].c-edges[e].f > 0){
+			if(int x = dfs(edges[e].v, t, min(f,edges[e].c-edges[e].f))){
+				edges[e].f += x;
+				edges[e^1].f -= x;
+				return x;
+			}
+		}
+	}
+	return 0;
+}
+
+int maxFlow(int s, int t){
+	int ans = 0;
+	cnt = 1;
+	memset(vis, 0, sizeof vis);
+	while(int flow = dfs(s, t, 1<<30)){
+		ans += flow;
+		cnt++;
+	}
+	return ans;
+}
+	\end{lstlisting}
+\end{multicols}
