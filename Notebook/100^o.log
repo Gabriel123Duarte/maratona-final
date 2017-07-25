@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.5.11)  25 JUL 2017 17:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.5.11)  25 JUL 2017 17:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -701,57 +701,6 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-! Missing $ inserted.
-<inserted text> 
-                $
-l.37 \maketitle
-               
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.37 \maketitle
-               
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.37 \maketitle
-               
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.37 \maketitle
-               
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Extra }, or forgotten \endgroup.
-\maketitle ...begin {center}{\LARGE \@title \par }
-                                                  \vskip 3em{\large \lineski...
-l.37 \maketitle
-               
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
 [1
 
 
@@ -792,7 +741,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 166--178
 
  []
 
-[4] [5] <ascii.jpg, id=39, 789.70032pt x 581.92406pt>
+[4] [5] <ascii.jpg, id=38, 789.70032pt x 581.92406pt>
 File: ascii.jpg Graphic file (type jpg)
  <use ascii.jpg>
 Package pdftex.def Info: ascii.jpg used on input line 326.
@@ -834,11 +783,11 @@ Cap\'{\i }tulo 8.
 
 ] (./100^o.aux) ) 
 Here is how much of TeX's memory you used:
- 6140 strings out of 494929
- 78272 string characters out of 6180142
+ 6136 strings out of 494929
+ 78209 string characters out of 6180142
  502292 words of memory out of 5000000
- 9299 multiletter control sequences out of 15000+600000
- 23442 words of font info for 54 fonts, out of 8000000 for 9000
+ 9296 multiletter control sequences out of 15000+600000
+ 22304 words of font info for 50 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
  37i,10n,58p,321b,1387s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/gabriel/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti100
@@ -847,22 +796,21 @@ Here is how much of TeX's memory you used:
 briel/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx0800.600pk> </home/gabriel/.te
 xmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/gabriel/.texmf-var/f
 onts/pk/ljfour/jknappen/ec/ecbx2074.600pk> </home/gabriel/.texmf-var/fonts/pk/l
-jfour/jknappen/ec/ecbx1000.600pk> </home/gabriel/.texmf-var/fonts/pk/ljfour/jkn
-appen/ec/ecbx2488.600pk> </home/gabriel/.texmf-var/fonts/pk/ljfour/jknappen/ec/
-ecrm1200.600pk> </home/gabriel/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.
+jfour/jknappen/ec/ecrm1000.600pk> </home/gabriel/.texmf-var/fonts/pk/ljfour/jkn
+appen/ec/ecbx1000.600pk> </home/gabriel/.texmf-var/fonts/pk/ljfour/jknappen/ec/
+ecbx2488.600pk> </home/gabriel/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.
 600pk> </home/gabriel/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmsy8.pfb>
-Output written on 100^o.pdf (16 pages, 580002 bytes).
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmsy8.pfb>
+Output written on 100^o.pdf (16 pages, 573210 bytes).
 PDF statistics:
- 479 PDF objects out of 1000 (max. 8388607)
- 105 compressed objects within 2 object streams
+ 475 PDF objects out of 1000 (max. 8388607)
+ 102 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
