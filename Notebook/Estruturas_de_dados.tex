@@ -1,1 +1,44 @@
 \chapter{Estruturas de dados}
+
+\section{Prefix Sum 1D}
+
+Soma $a..b$ em $O(1)$.
+\begin{multicols}{2}
+\begin{lstlisting}
+#define MAXN 1000
+int arr[MAXN];
+int prefix[MAXN];
+
+void build(int n){
+	prefix[0] = 0;
+	for(int i = 1; i <= n; i++) // arr 1-indexado
+		prefix[i] = prefix[i-1]+arr[i];
+}
+
+int get(int a, int b){
+	return prefix[b] - prefix[a-1];
+}
+
+\end{lstlisting}
+\end{multicols}
+
+
+\section{BIT - Fenwick Tree}
+
+Soma $1..N$ e update em ponto em $O(log n)$.
+\begin{multicols}{2}
+	\begin{lstlisting}
+#define MAXN 10000
+int bit[MAXN];
+void update(int x, int val){
+	for(; x < MAXN; x+=x&-x)
+		bit[x] += val;
+}
+int get(int x){
+	int ans = 0;
+	for(; x; x-=x&-x)
+		ans += bit[x];
+	return ans;
+}
+	\end{lstlisting}
+\end{multicols}
