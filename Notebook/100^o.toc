@@ -18,8 +18,10 @@
 \contentsline {chapter}{\numberline {3}Paradigmas}{10}
 \contentsline {chapter}{\numberline {4}Grafos}{11}
 \contentsline {section}{\numberline {4.1}Ford Fulkerson}{11}
-\contentsline {chapter}{\numberline {5}Matem\IeC {\'a}tica}{12}
-\contentsline {chapter}{\numberline {6}Processamento de Strings}{13}
-\contentsline {chapter}{\numberline {7}Geometria Computacional}{14}
-\contentsline {chapter}{\numberline {8}Miscel\IeC {\^a}nea}{15}
+\contentsline {section}{\numberline {4.2}Edmonds Karp}{11}
+\contentsline {section}{\numberline {4.3}Dinic}{11}
+\contentsline {chapter}{\numberline {5}Matem\IeC {\'a}tica}{13}
+\contentsline {chapter}{\numberline {6}Processamento de Strings}{14}
+\contentsline {chapter}{\numberline {7}Geometria Computacional}{15}
+\contentsline {chapter}{\numberline {8}Miscel\IeC {\^a}nea}{16}
 \select@language {english}

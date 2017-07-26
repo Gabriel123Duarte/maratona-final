@@ -54,3 +54,83 @@ int maxFlow(int s, int t){
 }
 	\end{lstlisting}
 \end{multicols}
+
+
+\section{Edmonds Karp}
+
+Troca a $dfs()$ do Ford Fulkerson por uma $bfs()$ e o fluxo máximo fica em $O(VE^2)$.
+
+\section{Dinic}
+
+Encontra o fluxo máximo em $O(V^2E)$.
+\begin{multicols}{2}
+	\begin{lstlisting}
+#define MAXN 5050
+#define inf 0x3f3f3f3f
+
+struct node{
+	int v, f, c;
+	node(){}
+	node(int _v, int _f, int _c){
+		v = _v, f = _f, c = _c;
+	}
+};
+vector<node> edges;
+vector<int> graph[MAXN];
+int dist[MAXN];
+int ptr[MAXN];
+
+void add(int u, int v, int c){
+	edges.pb(node(v, 0, c));
+	graph[u].pb(edges.size()-1);
+	edges.pb(node(u, 0, 0));
+	graph[v].pb(edges.size()-1);
+}
+
+bool bfs(int s, int t){
+	memset(dist, inf, sizeof dist);
+	dist[s] = 0;
+	queue<int> q;
+	q.push(s);
+	
+	while(!q.empty()){
+		int u = q.front(); q.pop();
+		for(auto e : graph[u]){
+			if(dist[edges[e].v] == inf && edges[e].c-edges[e].f > 0){
+				q.push(edges[e].v);
+				dist[edges[e].v] = dist[u] + 1;
+			}
+		}
+	}
+	
+	return dist[t] != inf;
+}
+
+int dfs(int s, int t, int f){
+	if(s == t)
+	return f;
+	for(int &i = ptr[s]; i < graph[s].size(); i++){
+		int e = graph[s][i];
+		if(dist[edges[e].v] == dist[s]+1 && edges[e].c-edges[e].f > 0){
+			if(int x = dfs(edges[e].v, t, min(f, edges[e].c-edges[e].f))){
+				edges[e].f += x;
+				edges[e^1].f -= x;
+				return x;
+			}
+		}
+	}
+	
+	return 0;
+}
+
+int maxFlow(int s, int t){
+	int ans = 0;
+	while(bfs(s, t)){
+		memset(ptr, 0, sizeof ptr);
+		while(int f = dfs(s, t, inf))
+		ans += f;
+	}
+	return ans;
+}
+\end{lstlisting}
+\end{multicols}
