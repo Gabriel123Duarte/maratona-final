@@ -134,3 +134,93 @@ int maxFlow(int s, int t){
 }
 \end{lstlisting}
 \end{multicols}
+
+\section{Tarjan}
+
+Componentes fortemente conexos em $O(V+E)$.
+\begin{multicols}{2}
+	\begin{lstlisting}
+#define MAXN 100100
+vector<int> graph[MAXN];
+stack<int> st;
+int in[MAXN], low[MAXN], vis[MAXN], cnt;
+int sccs;
+
+void dfs(int u){
+	in[u] = low[u] = cnt++;
+	vis[u] = 1;
+	st.push(u);
+	
+	for(auto v : graph[u]){
+		if(!vis[v]){
+			dfs(v);
+			low[u] = min(low[u], low[v]);
+		}
+		else
+			low[u] = min(low[u], in[v]);
+	}
+	if(low[u] == in[u]){
+		sccs++;
+		int x;
+		do{
+			x = st.top();
+			st.pop();
+			in[x] = 1<<30;
+		}while(x != u);
+	}
+}
+
+void tarjan(int n){
+	cnt = sccs = 0;
+	memset(vis, 0, sizeof vis);
+	while(!st.empty())
+		st.pop();
+	for(int i = 0; i < n; i++)
+		if(!vis[i])
+			dfs(i);
+}
+\end{lstlisting}
+\end{multicols}
+
+\section{Pontos de articulação}
+
+Complexidade $O(V+E)$.
+\begin{multicols}{2}
+	\begin{lstlisting}
+#define MAXN 100100
+vector<int> graph[MAXN];
+int in[MAXN], low[MAXN], vis[MAXN], cnt;
+vector<int> points;
+
+void dfs(int u int root){
+	in[u] = low[u] = cnt++;
+	vis[u] = 1;
+	int total = 0;	
+	bool ok = 0;
+	for(auto v : graph[u]){
+		if(!vis[v]){
+			dfs(v, root);
+			low[u] = min(low[u], low[v]);
+			total++;
+			if(low[v] >= in[u])
+				ok = 1;
+			// if(low[v] > in[u]) u-v eh uma ponte
+		}
+		else
+			low[u] = min(low[u], in[v]);
+		
+	}
+	if(u == root && total >= 2 || ok && u != root)
+		points.pb(u);
+}
+
+void getPoints(int n){
+	cnt = 0;
+	points.clear();
+	memset(vis, 0, sizeof vis);
+	for(int i = 0; i < n; i++)
+		if(!vis[i])
+			dfs(i, i);
+}
+\end{lstlisting}
+\end{multicols}

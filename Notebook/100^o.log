@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.5.11)  25 JUL 2017 22:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.5.11)  27 JUL 2017 13:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -765,31 +765,31 @@ Cap\'{\i }tulo 3.
 Cap\'{\i }tulo 4.
 [11
 
-]) (./Matematica.tex [12]
+] [12]) (./Matematica.tex [13]
 Cap\'{\i }tulo 5.
-) (./Processamento_de_strings.tex [13
+) (./Processamento_de_strings.tex [14
 
 ]
 Cap\'{\i }tulo 6.
-) (./Geometria_computacional.tex [14
+) (./Geometria_computacional.tex [15
 
 ]
 Cap\'{\i }tulo 7.
-) (./Miscelanea.tex [15
+) (./Miscelanea.tex [16
 
 ]
 Cap\'{\i }tulo 8.
-) [16
+) [17
 
 ] (./100^o.aux) ) 
 Here is how much of TeX's memory you used:
- 6182 strings out of 494929
- 78606 string characters out of 6180142
- 502292 words of memory out of 5000000
- 9341 multiletter control sequences out of 15000+600000
+ 6209 strings out of 494929
+ 78855 string characters out of 6180142
+ 516292 words of memory out of 5000000
+ 9368 multiletter control sequences out of 15000+600000
  22990 words of font info for 51 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
- 37i,10n,58p,321b,1837s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,10n,58p,321b,1876s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/gabriel/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti100
 0.600pk> </home/gabriel/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti0800.600pk> 
 </home/gabriel/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecsl1000.600pk> </home/ga
@@ -808,10 +808,10 @@ onts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmsy8.pfb>
-Output written on 100^o.pdf (17 pages, 585013 bytes).
+Output written on 100^o.pdf (18 pages, 592261 bytes).
 PDF statistics:
- 507 PDF objects out of 1000 (max. 8388607)
- 108 compressed objects within 2 object streams
+ 528 PDF objects out of 1000 (max. 8388607)
+ 110 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
