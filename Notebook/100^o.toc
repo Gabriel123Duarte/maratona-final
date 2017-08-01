@@ -20,10 +20,13 @@
 \contentsline {section}{\numberline {4.1}Ford Fulkerson}{11}
 \contentsline {section}{\numberline {4.2}Edmonds Karp}{11}
 \contentsline {section}{\numberline {4.3}Dinic}{11}
-\contentsline {section}{\numberline {4.4}Tarjan}{12}
-\contentsline {section}{\numberline {4.5}Pontos de articula\IeC {\c c}\IeC {\~a}o}{12}
-\contentsline {chapter}{\numberline {5}Matem\IeC {\'a}tica}{14}
-\contentsline {chapter}{\numberline {6}Processamento de Strings}{15}
-\contentsline {chapter}{\numberline {7}Geometria Computacional}{16}
-\contentsline {chapter}{\numberline {8}Miscel\IeC {\^a}nea}{17}
+\contentsline {section}{\numberline {4.4}Min cost max flow}{12}
+\contentsline {section}{\numberline {4.5}Stoer-Wagner}{13}
+\contentsline {section}{\numberline {4.6}Tarjan}{13}
+\contentsline {section}{\numberline {4.7}Pontos de articula\IeC {\c c}\IeC {\~a}o}{13}
+\contentsline {chapter}{\numberline {5}Matem\IeC {\'a}tica}{15}
+\contentsline {chapter}{\numberline {6}Processamento de Strings}{16}
+\contentsline {chapter}{\numberline {7}Geometria Computacional}{17}
+\contentsline {section}{\numberline {7.1}Template - J\IeC {\'u}nior}{17}
+\contentsline {chapter}{\numberline {8}Miscel\IeC {\^a}nea}{19}
 \select@language {english}

@@ -135,6 +135,157 @@ int maxFlow(int s, int t){
 \end{lstlisting}
 \end{multicols}
 
+\section{Min cost max flow}
+
+Máximo fluxo com custo mínimo.
+\begin{multicols}{2}
+	\begin{lstlisting}
+
+#define MAXN 1100
+#define inf 0x3f3f3f3f
+struct node{
+	int v, f, c, val;
+	node(){}
+	node(int _v, int _f, int _c, int _val){
+		v = _v, f = _f, c = _c, val = _val;
+	}
+};
+
+int v;
+vector<node> edges;
+vector<int> graph[MAXN];
+int dist[MAXN], ptr[MAXN], pai[MAXN];
+
+void add(int u, int v, int c, int val){
+	edges.pb(node(v, 0, c, val));
+	graph[u].pb(edges.size()-1);
+	edges.pb(node(u, 0, 0, -val));
+	graph[v].pb(edges.size()-1);
+}
+
+ii operator+(ii a, ii b){
+	a.fst += b.fst;
+	a.snd += b.snd;
+	return a;
+}
+
+bool dijkstra(int s, int t){
+	for(int i = 0; i < v; i++){
+		dist[i] = inf;
+		pai[i] = -1;
+	}
+	dist[s] = 0;
+	priority_queue<ii, vector<ii>, greater<ii>> q;
+	q.push(ii(0, s));
+	
+	while(!q.empty()){
+		int d = q.top().fst, u = q.top().snd;
+		q.pop();
+		
+		if(d > dist[u])
+			continue;
+		
+		for(auto e : graph[u]){
+			if(dist[u] + edges[e].val < dist[edges[e].v] && edges[e].c-edges[e].f > 0){
+				dist[edges[e].v] = dist[u] + edges[e].val;
+				pai[edges[e].v] = u;
+				q.push({dist[edges[e].v], edges[e].v});
+			}
+		}
+	}
+	
+	return dist[t] != inf;
+}
+
+ii dfs(int s, int t, int f){
+	if(s == t)
+		return ii(0, f);
+	
+	for(int &i = ptr[s]; i < graph[s].size(); i++){
+		int e = graph[s][i];
+		if(pai[edges[e].v] == s && edges[e].c-edges[e].f > 0){
+			ii x = ii(edges[e].val, 0) + dfs(edges[e].v, t, min(f, edges[e].c-edges[e].f));
+			if(x.snd){
+				edges[e].f += x.snd;
+				edges[e^1].f -= x.snd;
+				return x;
+			}
+		}
+	}
+	
+	return ii(0, 0);
+}
+
+ii get(int s, int t){
+	ii ans(0, 0);
+	while(dijkstra(s, t)){
+		memset(ptr, 0, sizeof ptr);
+		ii x;
+		while((x = dfs(s, t, inf)).snd)
+			ans = ans + x;
+	}
+	return ans;
+}
+
+\end{lstlisting}
+\end{multicols}
+\section{Stoer-Wagner}
+
+Custo mínimo para quebrar o grafo em dois componentes.
+\begin{multicols}{2}
+	\begin{lstlisting}
+	
+#define NN 105 // Vertices
+#define MAXW 105 // Max value of edge
+
+int g[NN][NN], v[NN], w[NN], na[NN]; //graph comeca com tudo 0
+bool a[NN];
+
+int minCut(int n)
+{
+	for(int i = 0; i < n; i++)
+	v[i] = i;
+	
+	int best = MAXW * n * n;
+	while(n > 1)
+	{
+		a[v[0]] = true;
+		for(int i = 1; i < n; i++)
+		{
+			a[v[i]] = false;
+			na[i - 1] = i;
+			w[i] = g[v[0]][v[i]];
+		} 
+		
+		int prev = v[0];
+		for(int i = 1; i < n; i++)
+		{
+			int zj = -1;
+			for(int j = 1; j < n; j++)
+			if(!a[v[j]] && (zj < 0 || w[j] > w[zj]))
+			zj = j;
+			
+			a[v[zj]] = true;
+			
+			if(i == n - 1)
+			{
+				best = min(best, w[zj]);
+				for(int j = 0; j < n; j++)
+				g[v[j]][prev] = g[prev][v[j]] += g[v[zj]][v[j]];
+				v[zj] = v[--n];
+				break;
+			}
+			prev = v[zj];	
+			
+			for(int j = 1; j < n; j++ )
+			if(!a[v[j]])
+			w[j] += g[v[zj]][v[j]];
+		}	
+	}
+	return best;
+}
+\end{lstlisting}
+\end{multicols}
 \section{Tarjan}
 
 Componentes fortemente conexos em $O(V+E)$.

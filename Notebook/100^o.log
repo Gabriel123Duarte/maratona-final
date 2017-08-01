@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.5.11)  27 JUL 2017 13:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.5.11)  1 AUG 2017 12:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -765,28 +765,33 @@ Cap\'{\i }tulo 3.
 Cap\'{\i }tulo 4.
 [11
 
-] [12]) (./Matematica.tex [13]
+] [12]
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 249.
+ [13]) (./Matematica.tex [14]
 Cap\'{\i }tulo 5.
-) (./Processamento_de_strings.tex [14
+) (./Processamento_de_strings.tex [15
 
 ]
 Cap\'{\i }tulo 6.
-) (./Geometria_computacional.tex [15
+) (./Geometria_computacional.tex [16
 
 ]
 Cap\'{\i }tulo 7.
-) (./Miscelanea.tex [16
+LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <8> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 22.
+[17
 
-]
+]) (./Miscelanea.tex [18]
 Cap\'{\i }tulo 8.
-) [17
+) [19
 
 ] (./100^o.aux) ) 
 Here is how much of TeX's memory you used:
- 6209 strings out of 494929
- 78855 string characters out of 6180142
- 516292 words of memory out of 5000000
- 9368 multiletter control sequences out of 15000+600000
+ 6401 strings out of 494929
+ 80740 string characters out of 6180142
+ 1100292 words of memory out of 5000000
+ 9560 multiletter control sequences out of 15000+600000
  22990 words of font info for 51 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
  37i,10n,58p,321b,1876s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -808,10 +813,10 @@ onts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmsy8.pfb>
-Output written on 100^o.pdf (18 pages, 592261 bytes).
+Output written on 100^o.pdf (20 pages, 615773 bytes).
 PDF statistics:
- 528 PDF objects out of 1000 (max. 8388607)
- 110 compressed objects within 2 object streams
+ 569 PDF objects out of 1000 (max. 8388607)
+ 115 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
