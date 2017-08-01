@@ -375,3 +375,50 @@ void getPoints(int n){
 }
 \end{lstlisting}
 \end{multicols}
+
+\section{LCA (Sparce Table)}
+
+Complexidade $<O(nlog), O(log)>$.
+\begin{multicols}{2}
+	\begin{lstlisting}
+#define INF 0x3f3f3f3f
+#define N 1100
+#define LOG 15
+
+int parents[N][LOG], depth[N];
+vector<vi> graph;
+
+void dfs(int u, int p, int h){
+	parents[u][0] = p;
+	depth[u] = h;
+	
+	for (int i = 1; i < LOG; i++)
+	if (parents[u][i - 1] != -1)
+	parents[u][i] = parents[parents[u][i - 1]][i - 1];
+	
+	for (int i = 0; i < graph[u].size(); i++)
+	if (graph[u][i] != parents[u][0])
+	dfs(graph[u][i], u, h + 1);	
+}
+
+int lca(int u, int v){
+	if (depth[u] > depth[v])
+	swap(u, v);
+	
+	for (int i = LOG - 1; i >= 0; i--)
+	if (parents[v][i] != -1 && depth[parents[v][i]] >= depth[u])
+	v = parents[v][i];
+	
+	if (u == v) 
+	return u;
+	
+	for (int i = LOG - 1; i >= 0; i--)
+	if (parents[u][i] != parents[v][i]){
+		u = parents[u][i];
+		v = parents[v][i];
+	}
+	
+	return parents[u][0];	
+}
+\end{lstlisting}
+\end{multicols}
