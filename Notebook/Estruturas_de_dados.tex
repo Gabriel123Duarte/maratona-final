@@ -150,3 +150,144 @@ void updatex(int idxx, int lx, int rx, int idxy, int ly, int ry, int px, int py,
 
 	\end{lstlisting}
 \end{multicols}
+
+\section{Convex hull trick 1}
+
+Quando o X está ordenado. \\
+Inserir retas do tipo Y = A*X + B. \\
+Para máximo adicionar o A e B negativos e quando consultar coloca negativo o valor.
+
+\begin{multicols}{2}
+	\begin{lstlisting}
+struct hull{
+	ll A[MAXN];
+	ll B[MAXN];
+	int len, ptr;
+	hull(){
+		len = ptr = 0;
+	}
+	
+	void addLine(ll a, ll b){
+		while(len >= 2 && (B[len-2] - B[len-1]) * (a-A[len-1]) >= (B[len-1]-b) * (A[len-1]-A[len-2]))
+		len--;
+		A[len] = a;
+		B[len] = b;
+		len++;
+	}
+	
+	ll get(ll x){
+		ptr = min(ptr, len-1);
+		while(ptr+1 < len && A[ptr+1]*x+B[ptr+1] <= A[ptr]*x + B[ptr])
+		ptr++;
+		return A[ptr]*x + B[ptr];
+	}
+};
+
+\end{lstlisting}
+\end{multicols}
+
+\section{Convex hull trick 2}
+
+Quando o X não está ordenado. 
+
+\begin{multicols}{2}
+	\begin{lstlisting}
+
+class ConvexHullTrick {
+	struct CHTPoint {
+		double x, y, lim;
+		
+	};
+	vector<CHTPoint> pilha;
+	inline double get_intersection(CHTPoint a, CHTPoint b) {
+		double denom = ( double(b.x) - a.x);
+		double num = ( double(b.y) - a.y);
+		
+		return -num / denom;
+	}
+	
+	bool ccw(CHTPoint p0, CHTPoint p1, CHTPoint p2) {
+		return ((double)(p1.y-p0.y)*(double)(p2.x-p0.x) > (double)(p2.y-p0.y)*(double)(p1.x-p0.x));
+	}
+	
+	public:
+	
+	void add_line(double a, double b) {
+		CHTPoint novo = {a, b, 0};
+		int tam = pilha.size();
+		while (tam >= 2 && !ccw(pilha[tam-2], pilha[tam-1], novo)) {
+			pilha.pop_back();
+			tam--;
+		}
+		while (tam >= 1 && fabs(pilha[tam-1].x - a) < 1e-8) {
+			pilha.pop_back();
+			tam--;
+		}
+		
+		pilha.push_back(novo);
+		if (tam >= 1) pilha[tam-1].lim = get_intersection(pilha[tam-1], pilha[tam]);
+	}
+	
+	double get_maximum(double x) {
+		int st = 0, ed = pilha.size() - 1;
+		while (st < ed) {
+			int mid = (st+ed)/2;
+			if (pilha[mid].lim < x) st = mid+1;
+			else ed = mid;
+		}
+		return pilha[st].x * x + pilha[st].y;
+	}
+	
+};
+
+
+\end{lstlisting}
+\end{multicols}
+
+\section{Convex hull trick 3 - Fully Dynamic}
+
+Sem condições especiais para o A e B
+
+\begin{multicols}{2}
+	\begin{lstlisting}
+
+
+const ll is_query = -(1LL<<62);
+struct Line {
+	ll m, b;
+	mutable function<const Line*()> succ;
+	bool operator<(const Line& rhs) const {
+		if (rhs.b != is_query) return m < rhs.m;
+		const Line* s = succ();
+		if (!s) return 0;
+		ll x = rhs.m;
+		return b - s->b < (s->m - m) * x;
+	}
+};
+struct HullDynamic : public multiset<Line> { // will maintain upper hull for maximum
+	bool bad(iterator y) {
+		auto z = next(y);
+		if (y == begin()) {
+			if (z == end()) return 0;
+			return y->m == z->m && y->b <= z->b;
+		}
+		auto x = prev(y);
+		if (z == end()) return y->m == x->m && y->b <= x->b;
+		return (x->b - y->b)*(z->m - y->m) >= (y->b - z->b)*(y->m - x->m);
+	}
+	void insert_line(ll m, ll b) {
+		auto y = insert({ m, b });
+		y->succ = [=] { return next(y) == end() ? 0 : &*next(y); };
+		if (bad(y)) { erase(y); return; }
+		while (next(y) != end() && bad(next(y))) erase(next(y));
+		while (y != begin() && bad(prev(y))) erase(prev(y));
+	}
+	ll eval(ll x) {
+		auto l = *lower_bound((Line) { x, is_query });
+		return l.m * x + l.b;
+	}
+};
+
+\end{lstlisting}
+\end{multicols}
+
