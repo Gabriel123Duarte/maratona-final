@@ -15,6 +15,7 @@
 \contentsline {chapter}{\numberline {2}Estruturas de dados}{9}
 \contentsline {section}{\numberline {2.1}Prefix Sum 1D}{9}
 \contentsline {section}{\numberline {2.2}BIT - Fenwick Tree}{9}
+\contentsline {section}{\numberline {2.3}BIT - Fenwick Tree 2D}{9}
 \contentsline {chapter}{\numberline {3}Paradigmas}{10}
 \contentsline {chapter}{\numberline {4}Grafos}{11}
 \contentsline {section}{\numberline {4.1}Ford Fulkerson}{11}
