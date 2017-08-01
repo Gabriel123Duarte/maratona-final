@@ -16,19 +16,20 @@
 \contentsline {section}{\numberline {2.1}Prefix Sum 1D}{9}
 \contentsline {section}{\numberline {2.2}BIT - Fenwick Tree}{9}
 \contentsline {section}{\numberline {2.3}BIT - Fenwick Tree 2D}{9}
-\contentsline {chapter}{\numberline {3}Paradigmas}{10}
-\contentsline {chapter}{\numberline {4}Grafos}{11}
-\contentsline {section}{\numberline {4.1}Ford Fulkerson}{11}
-\contentsline {section}{\numberline {4.2}Edmonds Karp}{11}
-\contentsline {section}{\numberline {4.3}Dinic}{11}
-\contentsline {section}{\numberline {4.4}Min cost max flow}{12}
-\contentsline {section}{\numberline {4.5}Stoer-Wagner}{13}
-\contentsline {section}{\numberline {4.6}Tarjan}{13}
-\contentsline {section}{\numberline {4.7}Pontos de articula\IeC {\c c}\IeC {\~a}o}{13}
-\contentsline {section}{\numberline {4.8}LCA (Sparce Table)}{14}
-\contentsline {chapter}{\numberline {5}Matem\IeC {\'a}tica}{15}
-\contentsline {chapter}{\numberline {6}Processamento de Strings}{16}
-\contentsline {chapter}{\numberline {7}Geometria Computacional}{17}
-\contentsline {section}{\numberline {7.1}Template - J\IeC {\'u}nior}{17}
-\contentsline {chapter}{\numberline {8}Miscel\IeC {\^a}nea}{19}
+\contentsline {section}{\numberline {2.4}Segment Tree 2D}{9}
+\contentsline {chapter}{\numberline {3}Paradigmas}{11}
+\contentsline {chapter}{\numberline {4}Grafos}{12}
+\contentsline {section}{\numberline {4.1}Ford Fulkerson}{12}
+\contentsline {section}{\numberline {4.2}Edmonds Karp}{12}
+\contentsline {section}{\numberline {4.3}Dinic}{12}
+\contentsline {section}{\numberline {4.4}Min cost max flow}{13}
+\contentsline {section}{\numberline {4.5}Stoer-Wagner}{14}
+\contentsline {section}{\numberline {4.6}Tarjan}{14}
+\contentsline {section}{\numberline {4.7}Pontos de articula\IeC {\c c}\IeC {\~a}o}{14}
+\contentsline {section}{\numberline {4.8}LCA (Sparce Table)}{15}
+\contentsline {chapter}{\numberline {5}Matem\IeC {\'a}tica}{16}
+\contentsline {chapter}{\numberline {6}Processamento de Strings}{17}
+\contentsline {chapter}{\numberline {7}Geometria Computacional}{18}
+\contentsline {section}{\numberline {7.1}Template - J\IeC {\'u}nior}{18}
+\contentsline {chapter}{\numberline {8}Miscel\IeC {\^a}nea}{20}
 \select@language {english}
