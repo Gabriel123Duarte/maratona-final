@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.5.11)  1 AUG 2017 18:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.5.11)  1 AUG 2017 19:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -755,11 +755,12 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 ) (./Estruturas_de_dados.tex [7] [8]
 Cap\'{\i }tulo 2.
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 82.
 [9
 
-]) (./Paradigmas.tex [10]
+]
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 86.
+) (./Paradigmas.tex [10]
 Cap\'{\i }tulo 3.
 ) (./Grafos.tex [11
 
@@ -787,35 +788,36 @@ Cap\'{\i }tulo 8.
 
 ] (./100^o.aux) ) 
 Here is how much of TeX's memory you used:
- 6457 strings out of 494929
- 81214 string characters out of 6180142
+ 6458 strings out of 494929
+ 81233 string characters out of 6180142
  1100292 words of memory out of 5000000
- 9616 multiletter control sequences out of 15000+600000
+ 9617 multiletter control sequences out of 15000+600000
  22990 words of font info for 51 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
- 37i,10n,58p,321b,1876s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,10n,58p,321b,1877s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/gabriel/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti100
-0.600pk> </home/gabriel/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti0800.600pk> 
-</home/gabriel/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecsl1000.600pk> </home/ga
-briel/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/gabriel/.te
-xmf-var/fonts/pk/ljfour/jknappen/ec/ecbx0800.600pk> </home/gabriel/.texmf-var/f
-onts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/gabriel/.texmf-var/fonts/pk/l
-jfour/jknappen/ec/ecbx2074.600pk> </home/gabriel/.texmf-var/fonts/pk/ljfour/jkn
-appen/ec/ecrm1000.600pk> </home/gabriel/.texmf-var/fonts/pk/ljfour/jknappen/ec/
-ecbx1000.600pk> </home/gabriel/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2488.
-600pk> </home/gabriel/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </
-home/gabriel/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmsy8.pfb>
-Output written on 100^o.pdf (21 pages, 622357 bytes).
+0.600pk> </home/gabriel/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0700.600pk> 
+</home/gabriel/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti0800.600pk> </home/ga
+briel/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecsl1000.600pk> </home/gabriel/.te
+xmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/gabriel/.texmf-var/f
+onts/pk/ljfour/jknappen/ec/ecbx0800.600pk> </home/gabriel/.texmf-var/fonts/pk/l
+jfour/jknappen/ec/ecbx1440.600pk> </home/gabriel/.texmf-var/fonts/pk/ljfour/jkn
+appen/ec/ecbx2074.600pk> </home/gabriel/.texmf-var/fonts/pk/ljfour/jknappen/ec/
+ecrm1000.600pk> </home/gabriel/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.
+600pk> </home/gabriel/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2488.600pk> </
+home/gabriel/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/gabr
+iel/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmsy8.pfb>
+Output written on 100^o.pdf (21 pages, 622796 bytes).
 PDF statistics:
- 578 PDF objects out of 1000 (max. 8388607)
- 117 compressed objects within 2 object streams
+ 584 PDF objects out of 1000 (max. 8388607)
+ 121 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

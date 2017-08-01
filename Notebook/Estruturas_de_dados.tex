@@ -74,6 +74,10 @@ int get(int x1, int y1, int x2, int y2){
 
 \section{Segment Tree 2D}
 
+Quando a consulta é em uma distância de manhattan d, basta rotacionar o grid 45º.
+Todo ponto (x, y) vira (x+y, x-y).
+A consulta fica ((x+d, y+d), (x-d, y-d))
+
 \begin{multicols}{2}
 	\begin{lstlisting}
 
