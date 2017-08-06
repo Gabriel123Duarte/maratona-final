@@ -203,7 +203,7 @@ ii dfs(int s, int t, int f){
 	
 	for(int &i = ptr[s]; i < graph[s].size(); i++){
 		int e = graph[s][i];
-		if(pai[edges[e].v] == s && edges[e].c-edges[e].f > 0){
+		if(pai[edges[e].v] == s && dist[edges[e].v] == dist[s] + edges[e].val && edges[e].c-edges[e].f > 0){
 			ii x = ii(edges[e].val, 0) + dfs(edges[e].v, t, min(f, edges[e].c-edges[e].f));
 			if(x.snd){
 				edges[e].f += x.snd;

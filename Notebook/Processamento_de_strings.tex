@@ -1,1 +1,69 @@
 \chapter{Processamento de Strings}
+
+\section{Aho-Corasick}
+
+Após inserir todas as strings, chamar a função $aho();$
+
+\begin{multicols}{2}
+	\begin{lstlisting}
+
+#define MAXN 100100
+#define ALPHA 15
+
+int trie[MAXN][ALPHA];
+int term[MAXN];
+int failure[MAXN];
+int cnt;
+void insert(string s){
+	int node = 0;
+	for(auto c : s){
+		if(!trie[node][c-'a'])
+		trie[node][c-'a'] = cnt++;
+		node = trie[node][c-'a'];
+	}
+	term[node] = 1;
+}
+
+void aho(){
+	queue<int> q;
+	
+	for(int i = 0; i < ALPHA; i++){
+		if(trie[0][i]){
+			failure[trie[0][i]] = 0;
+			q.push(trie[0][i]);
+		}
+	}
+	
+	while(!q.empty()){
+		int u = q.front(); q.pop();
+		for(int i = 0; i < ALPHA; i++){
+			if(trie[u][i]){
+				int v = failure[u];
+				while(v && !trie[v][i])
+				v = failure[v];
+				v = trie[v][i];
+				failure[trie[u][i]] = v;
+				term[trie[u][i]] |= term[v];
+				q.push(trie[u][i]);
+			}	
+		}
+	}
+}
+
+int next(int node, int c){
+	while(node && !trie[node][c])
+	node = failure[node];
+	return trie[node][c];
+}
+
+void init(){
+	memset(trie, 0, sizeof trie);
+	memset(term, 0, sizeof term);
+	memset(failure, 0, sizeof failure);
+	memset(vis, 0, sizeof vis);
+	cnt = 1;
+}
+
+
+\end{lstlisting}
+\end{multicols}

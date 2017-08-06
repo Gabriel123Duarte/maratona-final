@@ -18,7 +18,7 @@
 \contentsline {section}{\numberline {2.3}BIT - Fenwick Tree 2D}{9}
 \contentsline {section}{\numberline {2.4}Segment Tree 2D}{9}
 \contentsline {section}{\numberline {2.5}Convex hull trick 1}{10}
-\contentsline {section}{\numberline {2.6}Convex hull trick 2}{11}
+\contentsline {section}{\numberline {2.6}Convex hull trick 2}{10}
 \contentsline {section}{\numberline {2.7}Convex hull trick 3 - Fully Dynamic}{11}
 \contentsline {chapter}{\numberline {3}Paradigmas}{12}
 \contentsline {chapter}{\numberline {4}Grafos}{13}
@@ -32,6 +32,7 @@
 \contentsline {section}{\numberline {4.8}LCA (Sparce Table)}{16}
 \contentsline {chapter}{\numberline {5}Matem\IeC {\'a}tica}{17}
 \contentsline {chapter}{\numberline {6}Processamento de Strings}{18}
+\contentsline {section}{\numberline {6.1}Aho-Corasick}{18}
 \contentsline {chapter}{\numberline {7}Geometria Computacional}{19}
 \contentsline {section}{\numberline {7.1}Template - J\IeC {\'u}nior}{19}
 \contentsline {chapter}{\numberline {8}Miscel\IeC {\^a}nea}{21}
