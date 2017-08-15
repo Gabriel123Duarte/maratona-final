@@ -35,5 +35,6 @@
 \contentsline {section}{\numberline {6.1}Aho-Corasick}{18}
 \contentsline {chapter}{\numberline {7}Geometria Computacional}{19}
 \contentsline {section}{\numberline {7.1}Template - J\IeC {\'u}nior}{19}
-\contentsline {chapter}{\numberline {8}Miscel\IeC {\^a}nea}{21}
+\contentsline {section}{\numberline {7.2}Menor c\IeC {\'\i }rculo}{20}
+\contentsline {chapter}{\numberline {8}Miscel\IeC {\^a}nea}{22}
 \select@language {english}
