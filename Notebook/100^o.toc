@@ -30,6 +30,7 @@
 \contentsline {section}{\numberline {4.6}Tarjan}{15}
 \contentsline {section}{\numberline {4.7}Pontos de articula\IeC {\c c}\IeC {\~a}o}{15}
 \contentsline {section}{\numberline {4.8}LCA (Sparce Table)}{16}
+\contentsline {section}{\numberline {4.9}Posi\IeC {\c c}\IeC {\~a}o de elemento em K passos em um ciclo}{16}
 \contentsline {chapter}{\numberline {5}Matem\IeC {\'a}tica}{17}
 \contentsline {chapter}{\numberline {6}Processamento de Strings}{18}
 \contentsline {section}{\numberline {6.1}Aho-Corasick}{18}
