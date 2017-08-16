@@ -172,6 +172,7 @@ struct Point {
 	
 	\end{lstlisting}
 \end{multicols}
+
 \section{Menor círculo}
 Menor círculo que engloba todos os pontos. $O(n)$.
 \begin{multicols}{2}
@@ -284,6 +285,150 @@ circle makeCircle(vector<point> points){
 		}
 	}
 	return c;
+}
+	\end{lstlisting}
+\end{multicols}
+
+\section{Kit de encolhimento - SBC 2016}
+
+Encontra a menor área de um polígono convexo os vértices são deslocados ou para o ponto médio de Ax ou Bx.
+
+\begin{multicols}{2}
+	\begin{lstlisting}
+
+#define inf 0x3f3f3f3f
+#define eps 1e-9
+#define MAXN 100010
+
+struct point{
+	double x, y;
+	point(){}
+	point(double a, double b){
+		x = a;
+		y = b;
+	}
+	point operator-(point other){
+		return point(x-other.x, y-other.y);
+	}
+	point operator+(point other){
+		return point(x+other.x, y+other.y);
+	}
+	point operator/(double v){
+		return point(x/v, y/v);
+	}
+	double operator*(point q){
+		return x*q.x + y*q.y;
+	}
+	double angle(){
+		return atan2(double(y), double(x));
+	}
+	void read() { scanf("%lf %lf", &x, &y); }
+};
+double cross(point p, point q) { return p.x*q.y-p.y*q.x; }
+
+double det(point a, point b, point c){
+	return (a.x * b.y) + (b.x * c.y) + (c.x * a.y) - (a.x * c.y) - (b.x * a.y) - (c.x * b.y);
+	double val = (b.y-a.y) * (c.x-b.x) - 
+	(b.x-a.x) * (c.y-b.y);
+	return val;
+}
+
+int direction(point a, point b, point c){
+	double val = det(a, b, c);
+	if(fabs(val) < eps)
+	return 0;
+	return val > 0 ? 1 : 2; // 0 Colinear, 1 Clockwise, 2 Counter
+}
+
+double area(point a, point b, point c){
+	return fabs(det(a, b, c));
+}
+
+int n;
+point v[MAXN];
+point medio[MAXN][2];
+point A, B;
+
+double dp[MAXN][2][2][2][3];
+int vis[MAXN][2][2][2][3];
+int cnt;
+int first, second;
+
+double solve(int id, int penul, int ult, int temArea, int ori){
+	if(id == n){
+		int o1 = direction(medio[id-2][penul], medio[id-1][ult], medio[0][first]);
+		int o2 = direction(medio[id-1][ult], medio[0][first], medio[1][second]);
+		// Tratar concavidade na hora de fechar o poligono
+		if(o2 == 0) 
+		o2 = o1;
+		if(o1 != o2) 
+		return 1LL<<60;
+		if(o1 != 0 && o1 != ori) 
+		return 1LL<<60;
+		if(temArea == 0) 
+		return 1LL<<60;
+		return 0;
+	}
+	double &ans = dp[id][penul][ult][temArea][ori];
+	if(vis[id][penul][ult][temArea][ori] == cnt)
+	return ans;
+	vis[id][penul][ult][temArea][ori] = cnt;
+	ans = 1LL<<60;
+	for(int i = 0; i < 2; i++){
+		int going = direction(medio[id-2][penul], medio[id-1][ult], medio[id][i]);
+		double a = area(medio[0][first], medio[id-1][ult], medio[id][i]);
+		
+		if(ori == 0){
+			ans = min(ans, a+solve(id+1, ult, i, temArea|(a>eps), going));
+		}
+		else if(going == ori || going == 0){
+			// Tratar casos de espiral
+			double c = cross(medio[id][i] - medio[id-1][ult], medio[0][first] - medio[id-1][ult]);
+			if(going == 0)
+			ans = min(ans, a+solve(id+1, ult, i, temArea|(a>eps), ori));
+			else{
+				if(fabs(c) < eps)
+				ans = min(ans, a+solve(id+1, ult, i, temArea|(a>eps), ori));
+				else if(going == 2 && c > 0) 
+				continue;
+				else if(going == 1 && c < 0) 
+				continue;
+				else 
+				ans = min(ans, a+solve(id+1, ult, i, temArea|(a>eps), ori));
+			}
+			
+			
+		}
+	}
+	return ans;
+}
+
+int main(){
+	scanf("%d", &n);
+	for(int i = 0; i < n; i++)
+	v[i].read();
+	A.read();
+	B.read();
+	
+	for(int i = 0; i < n; i++){
+		medio[i][0] = (v[i]+A)/2;
+		medio[i][1] = (v[i]+B)/2;			
+	}
+	
+	double ans = 1LL<<60;
+	for(int i = 0; i < 2; i++){
+		first = i;
+		for(int j = 0; j < 2; j++){
+			second = j;
+			cnt++;
+			for(int k = 0; k < 2; k++){
+				double a = area(medio[0][i], medio[1][j], medio[2][k]);
+				ans = min(ans,  a+solve(3, j, k, a > eps, direction(medio[0][i], medio[1][j], medio[2][k])));
+			}
+		}
+	}
+	printf("%.3lf\n", ans/2.0);
+	return 0;
 }
 	\end{lstlisting}
 \end{multicols}

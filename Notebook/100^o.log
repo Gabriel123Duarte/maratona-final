@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.5.11)  14 AUG 2017 21:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.5.11)  16 AUG 2017 11:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -782,16 +782,16 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <8> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 22.
 [19
 
-] [20]) (./Miscelanea.tex [21]
+] [20] [21]) (./Miscelanea.tex [22]
 Cap\'{\i }tulo 8.
-) [22
+) [23
 
 ] (./100^o.aux) ) 
 Here is how much of TeX's memory you used:
- 6584 strings out of 494929
- 82643 string characters out of 6180142
- 1100292 words of memory out of 5000000
- 9743 multiletter control sequences out of 15000+600000
+ 6618 strings out of 494929
+ 82951 string characters out of 6180142
+ 1177292 words of memory out of 5000000
+ 9777 multiletter control sequences out of 15000+600000
  22990 words of font info for 51 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
  37i,10n,58p,321b,1877s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -814,10 +814,10 @@ ts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type
 c/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmsy8.pfb>
-Output written on 100^o.pdf (23 pages, 638023 bytes).
+Output written on 100^o.pdf (24 pages, 645200 bytes).
 PDF statistics:
- 600 PDF objects out of 1000 (max. 8388607)
- 125 compressed objects within 2 object streams
+ 610 PDF objects out of 1000 (max. 8388607)
+ 127 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
