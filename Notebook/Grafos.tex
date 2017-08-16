@@ -436,7 +436,7 @@ int dp[N][LOG];
 
 // Caso base
 for(int i = 0; i < n; i++)
-	dp[i][0] = i;
+	dp[i][0] = ligacao[i];
 
 for(int i = 1; i < LOG; i++)
 	for(int j = 0; j < n; j++)
