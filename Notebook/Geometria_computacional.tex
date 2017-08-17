@@ -432,3 +432,48 @@ int main(){
 }
 	\end{lstlisting}
 \end{multicols}
+
+\section{Intersecção círculo e segmento}
+
+
+\begin{multicols}{2}
+	\begin{lstlisting}
+_inline(int cmp)(double x, double y = 0, double tol = EPS)
+{
+	return (x <= y + tol) ? (x + tol < y) ? -1 : 0 : 1;
+}
+double abs(point p)
+{
+	return hypot(p.x, p.y);
+}
+double arg(point p)
+{
+	return atan2(p.y, p.x);
+}
+typedef pair<point, double> circle;
+
+bool in_circle(circle C, point p)
+{
+	return cmp(abs(p - C.first), C.second) <= 0;
+}
+
+//////////////////////////////////////////////////////
+// Encontra o ponto do segmento mais proximo a C
+point circle_closest_point_seg(point p, point q, circle c)
+{
+	point A = q - p, B = c.first - p;
+	double proj = (A * B)/abs(A);
+	if (cmp(proj) < 0) return p;
+	if (cmp(proj, abs(A)) > 0) return q;
+	return p + (A * proj)/abs(A);
+}
+//////////////////////////////////////////////////////
+// Decide se o segmento pq se interseca com c
+bool seg_circle_intersect(point p, point q, circle c)
+{
+	point r = circle_closest_point_seg(p, q, c);
+	return in_circle(c, r);
+}
+	\end{lstlisting}
+\end{multicols}
+
