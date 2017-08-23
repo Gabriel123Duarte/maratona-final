@@ -42,3 +42,19 @@ ll gaussxor(ll arr[], int n){
 }
 	\end{lstlisting}
 \end{multicols}
+\section{Fórmula de Legendre}
+
+Dados um inteiro $n$ e um primo $p$, calcula o expoente da maior potência de $p$ que divide $n!$ em $O(logn)$.
+\begin{multicols}{2}
+	\begin{lstlisting}
+ll legendre(ll n, ll p){
+	ll ans = 0;
+	ll prod = p;
+	while(prod <= n){
+		ans += n/prod;
+		prod *= p;
+	}
+	return ans;
+}
+	\end{lstlisting}
+\end{multicols}

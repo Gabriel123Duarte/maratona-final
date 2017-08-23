@@ -33,6 +33,7 @@
 \contentsline {section}{\numberline {4.9}Posi\IeC {\c c}\IeC {\~a}o de elemento em K passos em um ciclo}{17}
 \contentsline {chapter}{\numberline {5}Matem\IeC {\'a}tica}{18}
 \contentsline {section}{\numberline {5.1}Elimina\IeC {\c c}\IeC {\~a}o de Gauss com o XOR}{18}
+\contentsline {section}{\numberline {5.2}F\IeC {\'o}rmula de Legendre}{18}
 \contentsline {chapter}{\numberline {6}Processamento de Strings}{19}
 \contentsline {section}{\numberline {6.1}Aho-Corasick}{19}
 \contentsline {chapter}{\numberline {7}Geometria Computacional}{20}
