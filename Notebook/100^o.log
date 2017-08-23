@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.5.11)  17 AUG 2017 14:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.5.11)  23 AUG 2017 13:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -704,14 +704,14 @@ e
 [1
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./100^o.toc)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./100^o.toc [1
+
+])
 \tf@toc=\write4
 \openout4 = `100^o.toc'.
 
 
-(./Introducao.tex [1
-
-]
+(./Introducao.tex [2]
 Cap\'{\i }tulo 1.
 
 Underfull \hbox (badness 10000) in paragraph at lines 51--52
@@ -724,14 +724,14 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 58.
- [2
+ [3
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 135--136
 
  []
 
-[3]
+[4]
 Underfull \hbox (badness 10000) in paragraph at lines 166--178
 
  []
@@ -741,48 +741,48 @@ Underfull \hbox (badness 10000) in paragraph at lines 166--178
 
  []
 
-[4] [5] <ascii.jpg, id=38, 789.70032pt x 581.92406pt>
+[5] [6] <ascii.jpg, id=42, 789.70032pt x 581.92406pt>
 File: ascii.jpg Graphic file (type jpg)
  <use ascii.jpg>
 Package pdftex.def Info: ascii.jpg used on input line 326.
 (pdftex.def)             Requested size: 368.28207pt x 271.38216pt.
- [6 <./ascii.jpg>]
+ [7 <./ascii.jpg>]
 
 LaTeX Warning: Float too large for page by 20.29312pt on input line 464.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) (./Estruturas_de_dados.tex [7] [8]
+) (./Estruturas_de_dados.tex [8] [9]
 Cap\'{\i }tulo 2.
-[9
+[10
 
 ]
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 86.
- [10]) (./Paradigmas.tex [11]
+ [11]) (./Paradigmas.tex [12]
 Cap\'{\i }tulo 3.
-) (./Grafos.tex [12
+) (./Grafos.tex [13
 
 ]
 Cap\'{\i }tulo 4.
-[13
+[14
 
-] [14] [15]) (./Matematica.tex [16]
+] [15] [16]) (./Matematica.tex [17]
 Cap\'{\i }tulo 5.
-) (./Processamento_de_strings.tex [17
+) (./Processamento_de_strings.tex [18
 
 ]
 Cap\'{\i }tulo 6.
-) (./Geometria_computacional.tex [18
+) (./Geometria_computacional.tex [19
 
 ]
 Cap\'{\i }tulo 7.
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <8> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 22.
-[19
+[20
 
-] [20] [21] [22]
+] [21] [22] [23]
 Overfull \hbox (19.83644pt too wide) in paragraph at lines 460--461
 [][] 
  []
@@ -792,27 +792,27 @@ Overfull \hbox (19.83644pt too wide) in paragraph at lines 470--471
 [][] 
  []
 
-) (./Miscelanea.tex [23]
+) (./Miscelanea.tex [24]
 Cap\'{\i }tulo 8.
-) [24
+) [25
 
 ] (./100^o.aux) ) 
 Here is how much of TeX's memory you used:
- 6638 strings out of 494929
- 83217 string characters out of 6180142
+ 6644 strings out of 494929
+ 83293 string characters out of 6180142
  1177292 words of memory out of 5000000
- 9797 multiletter control sequences out of 15000+600000
+ 9803 multiletter control sequences out of 15000+600000
  22990 words of font info for 51 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
  37i,10n,58p,321b,1877s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/gabriel/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti100
 0.600pk> </home/gabriel/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0700.600pk> 
 </home/gabriel/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti0800.600pk> </home/ga
-briel/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecsl1000.600pk> </home/gabriel/.te
-xmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/gabriel/.texmf-var/f
-onts/pk/ljfour/jknappen/ec/ecbx0800.600pk> </home/gabriel/.texmf-var/fonts/pk/l
-jfour/jknappen/ec/ecbx1440.600pk> </home/gabriel/.texmf-var/fonts/pk/ljfour/jkn
-appen/ec/ecbx2074.600pk> </home/gabriel/.texmf-var/fonts/pk/ljfour/jknappen/ec/
+briel/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/gabriel/.te
+xmf-var/fonts/pk/ljfour/jknappen/ec/ecbx0800.600pk> </home/gabriel/.texmf-var/f
+onts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/gabriel/.texmf-var/fonts/pk/l
+jfour/jknappen/ec/ecbx2074.600pk> </home/gabriel/.texmf-var/fonts/pk/ljfour/jkn
+appen/ec/ecsl1000.600pk> </home/gabriel/.texmf-var/fonts/pk/ljfour/jknappen/ec/
 ecrm1000.600pk> </home/gabriel/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.
 600pk> </home/gabriel/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2488.600pk> </
 home/gabriel/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/gabr
@@ -824,10 +824,10 @@ ts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type
 c/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmsy8.pfb>
-Output written on 100^o.pdf (25 pages, 648811 bytes).
+Output written on 100^o.pdf (26 pages, 652783 bytes).
 PDF statistics:
- 617 PDF objects out of 1000 (max. 8388607)
- 130 compressed objects within 2 object streams
+ 626 PDF objects out of 1000 (max. 8388607)
+ 132 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

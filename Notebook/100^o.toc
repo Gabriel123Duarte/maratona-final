@@ -1,43 +1,44 @@
 \select@language {english}
 \select@language {brazil}
-\contentsline {chapter}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{2}
-\contentsline {section}{\numberline {1.1}Template}{2}
-\contentsline {section}{\numberline {1.2}Fast Input}{2}
-\contentsline {section}{\numberline {1.3}Bugs do Mil\IeC {\^e}nio}{2}
-\contentsline {section}{\numberline {1.4}Recomenda\IeC {\c c}\IeC {\~o}es gerais}{3}
-\contentsline {section}{\numberline {1.5}Os 1010 mandamentos}{4}
-\contentsline {section}{\numberline {1.6}Limites da representa\IeC {\c c}\IeC {\~a}o de dados}{5}
-\contentsline {section}{\numberline {1.7}Quantidade de n\IeC {\'u}meros primos de $1$ at\IeC {\'e} $10^n$}{5}
-\contentsline {section}{\numberline {1.8}Tri\IeC {\^a}ngulo de Pascal}{5}
-\contentsline {section}{\numberline {1.9}Fatoriais}{6}
-\contentsline {section}{\numberline {1.10}Tabela ASCII}{6}
-\contentsline {section}{\numberline {1.11}Primos at\IeC {\'e} 10.000}{7}
-\contentsline {chapter}{\numberline {2}Estruturas de dados}{9}
-\contentsline {section}{\numberline {2.1}Prefix Sum 1D}{9}
-\contentsline {section}{\numberline {2.2}BIT - Fenwick Tree}{9}
-\contentsline {section}{\numberline {2.3}BIT - Fenwick Tree 2D}{9}
-\contentsline {section}{\numberline {2.4}Segment Tree 2D}{9}
-\contentsline {section}{\numberline {2.5}Convex hull trick 1}{10}
-\contentsline {section}{\numberline {2.6}Convex hull trick 2}{10}
-\contentsline {section}{\numberline {2.7}Convex hull trick 3 - Fully Dynamic}{11}
-\contentsline {chapter}{\numberline {3}Paradigmas}{12}
-\contentsline {chapter}{\numberline {4}Grafos}{13}
-\contentsline {section}{\numberline {4.1}Ford Fulkerson}{13}
-\contentsline {section}{\numberline {4.2}Edmonds Karp}{13}
-\contentsline {section}{\numberline {4.3}Dinic}{13}
-\contentsline {section}{\numberline {4.4}Min cost max flow}{14}
-\contentsline {section}{\numberline {4.5}Stoer-Wagner}{15}
-\contentsline {section}{\numberline {4.6}Tarjan}{15}
-\contentsline {section}{\numberline {4.7}Pontos de articula\IeC {\c c}\IeC {\~a}o}{15}
-\contentsline {section}{\numberline {4.8}LCA (Sparce Table)}{16}
-\contentsline {section}{\numberline {4.9}Posi\IeC {\c c}\IeC {\~a}o de elemento em K passos em um ciclo}{16}
-\contentsline {chapter}{\numberline {5}Matem\IeC {\'a}tica}{17}
-\contentsline {chapter}{\numberline {6}Processamento de Strings}{18}
-\contentsline {section}{\numberline {6.1}Aho-Corasick}{18}
-\contentsline {chapter}{\numberline {7}Geometria Computacional}{19}
-\contentsline {section}{\numberline {7.1}Template - J\IeC {\'u}nior}{19}
-\contentsline {section}{\numberline {7.2}Menor c\IeC {\'\i }rculo}{20}
-\contentsline {section}{\numberline {7.3}Kit de encolhimento - SBC 2016}{21}
-\contentsline {section}{\numberline {7.4}Intersec\IeC {\c c}\IeC {\~a}o c\IeC {\'\i }rculo e segmento}{22}
-\contentsline {chapter}{\numberline {8}Miscel\IeC {\^a}nea}{24}
+\contentsline {chapter}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{3}
+\contentsline {section}{\numberline {1.1}Template}{3}
+\contentsline {section}{\numberline {1.2}Fast Input}{3}
+\contentsline {section}{\numberline {1.3}Bugs do Mil\IeC {\^e}nio}{3}
+\contentsline {section}{\numberline {1.4}Recomenda\IeC {\c c}\IeC {\~o}es gerais}{4}
+\contentsline {section}{\numberline {1.5}Os 1010 mandamentos}{5}
+\contentsline {section}{\numberline {1.6}Limites da representa\IeC {\c c}\IeC {\~a}o de dados}{6}
+\contentsline {section}{\numberline {1.7}Quantidade de n\IeC {\'u}meros primos de $1$ at\IeC {\'e} $10^n$}{6}
+\contentsline {section}{\numberline {1.8}Tri\IeC {\^a}ngulo de Pascal}{6}
+\contentsline {section}{\numberline {1.9}Fatoriais}{7}
+\contentsline {section}{\numberline {1.10}Tabela ASCII}{7}
+\contentsline {section}{\numberline {1.11}Primos at\IeC {\'e} 10.000}{8}
+\contentsline {chapter}{\numberline {2}Estruturas de dados}{10}
+\contentsline {section}{\numberline {2.1}Prefix Sum 1D}{10}
+\contentsline {section}{\numberline {2.2}BIT - Fenwick Tree}{10}
+\contentsline {section}{\numberline {2.3}BIT - Fenwick Tree 2D}{10}
+\contentsline {section}{\numberline {2.4}Segment Tree 2D}{10}
+\contentsline {section}{\numberline {2.5}Convex hull trick 1}{11}
+\contentsline {section}{\numberline {2.6}Convex hull trick 2}{11}
+\contentsline {section}{\numberline {2.7}Convex hull trick 3 - Fully Dynamic}{12}
+\contentsline {chapter}{\numberline {3}Paradigmas}{13}
+\contentsline {chapter}{\numberline {4}Grafos}{14}
+\contentsline {section}{\numberline {4.1}Ford Fulkerson}{14}
+\contentsline {section}{\numberline {4.2}Edmonds Karp}{14}
+\contentsline {section}{\numberline {4.3}Dinic}{14}
+\contentsline {section}{\numberline {4.4}Min cost max flow}{15}
+\contentsline {section}{\numberline {4.5}Stoer-Wagner}{16}
+\contentsline {section}{\numberline {4.6}Tarjan}{16}
+\contentsline {section}{\numberline {4.7}Pontos de articula\IeC {\c c}\IeC {\~a}o}{16}
+\contentsline {section}{\numberline {4.8}LCA (Sparce Table)}{17}
+\contentsline {section}{\numberline {4.9}Posi\IeC {\c c}\IeC {\~a}o de elemento em K passos em um ciclo}{17}
+\contentsline {chapter}{\numberline {5}Matem\IeC {\'a}tica}{18}
+\contentsline {section}{\numberline {5.1}Elimina\IeC {\c c}\IeC {\~a}o de Gauss com o XOR}{18}
+\contentsline {chapter}{\numberline {6}Processamento de Strings}{19}
+\contentsline {section}{\numberline {6.1}Aho-Corasick}{19}
+\contentsline {chapter}{\numberline {7}Geometria Computacional}{20}
+\contentsline {section}{\numberline {7.1}Template - J\IeC {\'u}nior}{20}
+\contentsline {section}{\numberline {7.2}Menor c\IeC {\'\i }rculo}{21}
+\contentsline {section}{\numberline {7.3}Kit de encolhimento - SBC 2016}{22}
+\contentsline {section}{\numberline {7.4}Intersec\IeC {\c c}\IeC {\~a}o c\IeC {\'\i }rculo e segmento}{23}
+\contentsline {chapter}{\numberline {8}Miscel\IeC {\^a}nea}{25}
 \select@language {english}

@@ -1,1 +1,44 @@
 \chapter{Matemática}
+
+
+\section{Eliminação de Gauss com o XOR}
+
+Retorna o valor máximo de xor que é possível se obter fazendo xor entre os elementos da array. \\	
+Pode ser necessário o ull ou bitset.
+\begin{multicols}{2}
+	\begin{lstlisting}
+
+int len(ll x){
+	int ans = 0;
+	while(x){
+		ans++;
+		x >>= 1;
+	}
+	return ans;
+}
+	
+ll gaussxor(ll arr[], int n){
+	vector<ll> buckets[65];
+	for(int i = 0; i < n; i++)
+		buckets[len(arr[i])].pb(arr[i]);
+	
+	vector<ll> modified;
+	for(int i = 64; i; i--){
+		if(buckets[i].size()){
+			modified.pb(buckets[i][0]);
+			for(int j = 1; j < buckets[i].size(); j++){
+				ll temp = buckets[i][0] ^ buckets[i][j];
+				buckets[len(temp)].pb(temp);
+			}
+		}
+	}
+	
+	// Ans = maximum xor subset
+	ll ans = 0;
+	for(auto m : modified)
+		if(ans < ans^m)
+			ans ^= m;
+	return ans;
+}
+	\end{lstlisting}
+\end{multicols}
