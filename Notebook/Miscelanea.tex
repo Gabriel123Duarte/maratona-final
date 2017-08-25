@@ -1,1 +1,133 @@
 \chapter{Miscelânea}
+
+\section{Datas}
+
+\begin{multicols}{2}
+	\begin{lstlisting}
+
+struct Date {
+	int d, m, y;
+	static int mnt[], mntsum[];
+	
+	Date() : d(1), m(1), y(1) {}
+	Date(int d, int m, int y) : d(d), m(m), y(y) {}
+	Date(int days) : d(1), m(1), y(1) { advance(days); }
+	
+	bool bissexto() { return (y%4 == 0 and y%100) or (y%400 == 0); }
+		
+	int mdays() { return mnt[m] + (m == 2)*bissexto(); }
+	int ydays() { return 365+bissexto(); }
+		
+	int msum()  { return mntsum[m-1] + (m > 2)*bissexto(); }
+	int ysum()  { return 365*(y-1) + (y-1)/4 - (y-1)/100 + (y-1)/400; }
+		
+	int count() { return (d-1) + msum() + ysum(); }
+		
+	int day() {
+		int x = y - (m<3);
+		return (x + x/4 - x/100 + x/400 + mntsum[m-1] + d + 6)%7;
+	}
+		
+	void advance(int days) {
+		days += count();
+		d = m = 1, y = 1 + days/366;
+		days -= count();
+		while(days >= ydays()) days -= ydays(), y++;
+		while(days >= mdays()) days -= mdays(), m++;
+		d += days;
+	}
+};
+	
+int Date::mnt[13] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+int Date::mntsum[13] = {};
+for(int i=1; i<13; ++i) Date::mntsum[i] = Date::mntsum[i-1] + Date::mnt[i];
+
+// Week day
+int v[] = { 0, 3, 2, 5, 0, 3, 5, 1, 4, 6, 2, 4 };
+int day(int d, int m, int y) {
+	y -= m<3;
+	return (y + y/4 - y/100 + y/400 + v[m-1] + d)%7;
+}
+\end{lstlisting}
+\end{multicols}
+
+\section{Hash C++11}
+\begin{lstlisting}
+hash<string> hashFunc;
+cout << hashFunc("Gabriel") << endl;
+\end{lstlisting}
+
+\section{Mo's}
+Cada query em ~$O(sqrt(N)$.
+\begin{multicols}{2}
+\begin{lstlisting}
+
+#define MAXN 100100
+int BLOCK; // ~sqrt(MAXN)
+
+struct query{
+	int l, r, id;
+	bool operator<(const query foo)const{
+		if(l / BLOCK != foo.l / BLOCK)
+			return l / BLOCK < foo.l / BLOCK;
+		return r < foo.r;
+	}
+};
+
+int vis[MAXN], resp;
+
+void add(int id){
+	if(!vis[id]){
+		// Add element and update resp
+	}
+	else{
+		// Remove element and update resp
+	}
+	vis[id] ^= 1;
+}
+
+// IN MAIN
+int q;
+sort(queries, queries+q);
+int ans[q];
+int curL = 0, curR = 0;
+resp = 0;
+
+for(int i = 0; i < q; i++){
+	int l = queries[i].l, r = queries[i].r;
+	
+	while(curL < l)	add(curL++);
+	while(curL > l) add(--curL);
+	while(curR <= r) add(curR++);
+	while(curR > r+1) add(--curR--);
+	ans[queries[i].id] = resp;
+}
+
+\end{lstlisting}
+\end{multicols}
+
+\section{Problema do histograma}
+Maior retângulo do histograma em $O(n)$.
+\begin{multicols}{2}
+	\begin{lstlisting}
+
+ll histograma(ll vet[], int n){
+	stack<ll> s;
+	ll ans = 0, tp, cur;
+	int i = 0;
+	while(i < n || !s.empty()){
+		if(i < n && (s.empty() || vet[s.top()] <= vet[i]))
+			s.push(i++);
+		else{
+			tp = s.top();
+			s.pop();
+			cur = vet[tp]*(s.empty() ? i : i - s.top() - 1);
+			if(ans < cur)
+				ans = cur;
+		}
+	}
+	return ans;
+}
+
+\end{lstlisting}
+\end{multicols}

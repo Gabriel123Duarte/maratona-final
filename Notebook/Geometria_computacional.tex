@@ -326,6 +326,15 @@ struct point{
 };
 double cross(point p, point q) { return p.x*q.y-p.y*q.x; }
 
+// Sort by angle with pivot
+bool cmp(point a, point b){
+	point pivot = point(px, py);
+	int x = direction(pivot, a, b);
+	if(x == 0)
+		return (pivot-a)*(pivot-a) < (pivot-b)*(pivot-b);
+	return x==1;
+}
+
 double det(point a, point b, point c){
 	return (a.x * b.y) + (b.x * c.y) + (c.x * a.y) - (a.x * c.y) - (b.x * a.y) - (c.x * b.y);
 	double val = (b.y-a.y) * (c.x-b.x) - 

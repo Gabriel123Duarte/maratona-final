@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.5.11)  23 AUG 2017 14:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.5.11)  25 AUG 2017 11:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -759,75 +759,82 @@ Cap\'{\i }tulo 2.
 
 ]
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 86.
- [11]) (./Paradigmas.tex [12]
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 104.
+ [11] [12] [13]) (./Paradigmas.tex [14]
 Cap\'{\i }tulo 3.
-) (./Grafos.tex [13
+) (./Grafos.tex [15
 
 ]
 Cap\'{\i }tulo 4.
-[14
+[16
 
-] [15] [16]) (./Matematica.tex [17]
+] [17] [18] [19] [20]) (./Matematica.tex [21]
 Cap\'{\i }tulo 5.
-) (./Processamento_de_strings.tex [18
+[22
 
-]
+]) (./Processamento_de_strings.tex [23]
 Cap\'{\i }tulo 6.
-) (./Geometria_computacional.tex [19
 
-]
+Overfull \vbox (13.70964pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (6.85962pt too high) has occurred while \output is active []
+
+
+[24
+
+]) (./Geometria_computacional.tex [25]
 Cap\'{\i }tulo 7.
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <8> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 22.
-[20
+[26
 
-] [21] [22] [23]
-Overfull \hbox (19.83644pt too wide) in paragraph at lines 460--461
+] [27] [28] [29]
+Overfull \hbox (19.83644pt too wide) in paragraph at lines 469--470
 [][] 
  []
 
 
-Overfull \hbox (19.83644pt too wide) in paragraph at lines 470--471
+Overfull \hbox (19.83644pt too wide) in paragraph at lines 479--480
 [][] 
  []
 
-) (./Miscelanea.tex [24]
+) (./Miscelanea.tex [30]
 Cap\'{\i }tulo 8.
-) [25
+[31
 
-] (./100^o.aux) ) 
+]) [32] (./100^o.aux) ) 
 Here is how much of TeX's memory you used:
- 6648 strings out of 494929
- 83337 string characters out of 6180142
- 1177292 words of memory out of 5000000
- 9807 multiletter control sequences out of 15000+600000
+ 6820 strings out of 494929
+ 85179 string characters out of 6180142
+ 1116292 words of memory out of 5000000
+ 9979 multiletter control sequences out of 15000+600000
  22990 words of font info for 51 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
  37i,10n,58p,321b,1877s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/gabriel/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti100
-0.600pk> </home/gabriel/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0700.600pk> 
-</home/gabriel/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti0800.600pk> </home/ga
-briel/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/gabriel/.te
-xmf-var/fonts/pk/ljfour/jknappen/ec/ecbx0800.600pk> </home/gabriel/.texmf-var/f
-onts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/gabriel/.texmf-var/fonts/pk/l
-jfour/jknappen/ec/ecbx2074.600pk> </home/gabriel/.texmf-var/fonts/pk/ljfour/jkn
-appen/ec/ecsl1000.600pk> </home/gabriel/.texmf-var/fonts/pk/ljfour/jknappen/ec/
-ecrm1000.600pk> </home/gabriel/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.
-600pk> </home/gabriel/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2488.600pk> </
-home/gabriel/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/gabr
-iel/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmsy8.pfb>
-Output written on 100^o.pdf (26 pages, 653654 bytes).
+ </home/gabriel/.texmf-var/fonts/pk/ljfour/jknappen/ec/e
+cti1000.600pk> </home/gabriel/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0700.6
+00pk> </home/gabriel/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti0800.600pk> </h
+ome/gabriel/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/gabri
+el/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx0800.600pk> </home/gabriel/.texmf
+-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/gabriel/.texmf-var/font
+s/pk/ljfour/jknappen/ec/ecbx2074.600pk> </home/gabriel/.texmf-var/fonts/pk/ljfo
+ur/jknappen/ec/ecsl1000.600pk> </home/gabriel/.texmf-var/fonts/pk/ljfour/jknapp
+en/ec/ecrm1000.600pk> </home/gabriel/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecb
+x1000.600pk> </home/gabriel/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2488.600
+pk> </home/gabriel/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </hom
+e/gabriel/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmsy8.pfb>
+Output written on 100^o.pdf (33 pages, 690385 bytes).
 PDF statistics:
- 627 PDF objects out of 1000 (max. 8388607)
- 132 compressed objects within 2 object streams
+ 690 PDF objects out of 1000 (max. 8388607)
+ 147 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

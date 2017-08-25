@@ -58,3 +58,158 @@ ll legendre(ll n, ll p){
 }
 	\end{lstlisting}
 \end{multicols}
+
+\section{Número de fatores primos de N!}
+
+Dado um N encontra quantos fatores o N! possui
+\begin{multicols}{2}
+	\begin{lstlisting}
+// Sieve of Eratosthenes to mark all prime number
+// in array prime as 1
+void sieve(int n, bool prime[])
+{
+	// Initialize all numbers as prime
+	for (int i=1; i<=n; i++)
+	prime[i] = 1;
+	
+	// Mark composites
+	prime[1] = 0;
+	for (int i=2; i*i<=n; i++)
+	{
+		if (prime[i])
+		{
+			for (int j=i*i; j<=n; j += i)
+			prime[j] = 0;
+		}
+	}
+}
+
+// Returns the highest exponent of p in n!
+int expFactor(int n, int p)
+{
+	int x = p;
+	int exponent = 0;
+	while ((n/x) > 0)
+	{
+		exponent += n/x;
+		x *= p;
+	}
+	return exponent;
+}
+
+// Returns the no of factors in n!
+ll countFactors(int n)
+{
+	// ans stores the no of factors in n!
+	ll ans = 1;
+	
+	// Find all primes upto n
+	bool prime[n+1];
+	sieve(n, prime);
+	
+	// Multiply exponent (of primes) added with 1
+	for (int p=1; p<=n; p++)
+	{
+		// if p is a prime then p is also a
+		// prime factor of n!
+		if (prime[p]==1)
+		ans *= (expFactor(n, p) + 1);
+	}
+	
+	return ans;
+}
+
+\end{lstlisting}
+\end{multicols}
+
+\section{Trailing zeros in factorial}
+
+\begin{multicols}{2}
+	\begin{lstlisting}
+int findTrailingZeros(int  n){
+	// Initialize result
+	int count = 0;
+	
+	// Keep dividing n by powers of 5 and update count
+	for (int i=5; n/i>=1; i *= 5)
+		count += n/i;
+	
+	return count;
+}
+\end{lstlisting}
+\end{multicols}
+
+
+\section{Número de divisores de N!}
+
+Dado um N encontra quantos divisores o N! possui
+\begin{multicols}{2}
+	\begin{lstlisting}
+
+// allPrimes[] stores all prime numbers less
+// than or equal to n.
+vector<ull> allPrimes;
+
+// Fills above vector allPrimes[] for a given n
+void sieve(int n)
+{
+	// Create a boolean array "prime[0..n]" and
+	// initialize all entries it as true. A value
+	// in prime[i] will finally be false if i is
+	// not a prime, else true.
+	vector<bool> prime(n+1, true);
+	
+	// Loop to update prime[]
+	for (int p=2; p*p<=n; p++)
+	{
+		// If prime[p] is not changed, then it
+		// is a prime
+		if (prime[p] == true)
+		{
+			// Update all multiples of p
+			for (int i=p*2; i<=n; i += p)
+			prime[i] = false;
+		}
+	}
+	
+	// Store primes in the vector allPrimes
+	for (int p=2; p<=n; p++)
+	if (prime[p])
+	allPrimes.push_back(p);
+}
+
+// Function to find all result of factorial number
+ull factorialDivisors(ull n)
+{
+	sieve(n);  // create sieve
+	
+	// Initialize result
+	ull result = 1;
+	
+	// find exponents of all primes which divides n
+	// and less than n
+	for (int i=0; i < allPrimes.size(); i++)
+	{
+		// Current divisor
+		ull p = allPrimes[i];
+		
+		// Find the highest power (stored in exp)'
+		// of allPrimes[i] that divides n using
+		// Legendre's formula.
+		ull exp = 0;
+		while (p <= n)
+		{
+			exp = exp + (n/p);
+			p = p*allPrimes[i];
+		}
+		
+		// Multiply exponents of all primes less
+		// than n
+		result = result*(exp+1);
+	}
+	
+	// return total divisors
+	return result;
+}
+\end{lstlisting}
+\end{multicols}

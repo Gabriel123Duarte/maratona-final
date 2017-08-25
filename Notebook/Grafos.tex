@@ -447,3 +447,172 @@ for(int j = 0; j < LOG; j++)
 		u = dp[u][j]; 
 \end{lstlisting}
 \end{multicols}
+
+\section{Hopcroft Karp}
+
+Maior matching em grafo bipartido.q	
+
+\begin{multicols}{2}
+	\begin{lstlisting}
+#define MAXN 100100
+vector<int> graph[MAXN];
+int dist[MAXN], match[MAXN];
+
+bool bfs(){
+	queue<int> q;
+	for(int i = 1; i <= n; i++){
+		if(!match[i]){
+			dist[i] = 0;
+			q.push(i);
+		}
+		else
+		dist[i] = 1<<30;
+	}
+	
+	dist[0] = 1<<30;
+	while(!q.empty()){
+		int u = q.front(); q.pop();
+		if(u){
+			for(auto v : graph[u])
+			if(dist[match[v]] == 1<<30){
+				dist[match[v]] = dist[u]+1;
+				q.push(match[v]);
+			}
+		}
+	}
+	return dist[0] != 1<<30;
+}
+
+bool dfs(int u){
+	if(u){
+		for(auto v : graph[u]){
+			if(dist[match[v]] == dist[u]+1){
+				if(dfs(match[v])){
+					match[v] = u;
+					match[u] = v;
+					return 1;
+				}
+			}
+		}
+		dist[u] = 1<<30;
+		return 0;
+	}
+	return 1;
+}
+// Grafo indexado de 1
+int hopcroftKarp(){
+	int ans = 0;
+	memset(match, 0, sizeof match);
+	while(bfs())
+		for(int i = 1; i <= n; i++)
+			if(!match[i] && dfs(i))
+				ans++;
+	return ans;
+}
+
+\end{lstlisting}
+\end{multicols}
+
+\section{Blossom}
+Matching para grafos genéricos.
+\begin{multicols}{2}
+	\begin{lstlisting}
+
+int lca(vi &match, vi &base, vi &p, int a, int b){
+	vi used(match.size(), 0);
+	while(1){
+		a = base[a];
+		used[a] = 1;
+		if(match[a] == -1)
+			break;
+		a = p[match[a]];
+	}
+	while(1){
+		b = base[b];
+		if(used[b])
+			return b;
+		b = p[match[b]];
+	}
+}
+
+void markPath(vi &match, vi &base, vi &blossom, vi &p, int v, int b, int children){
+	for(; base[v] != b; v = p[match[v]]){
+		blossom[base[v]] = blossom[base[match[v]]] = true;
+		p[v] = children;
+		children = match[v];
+	}
+}
+
+int findPath(vector<vi> &graph, vi &match, vi &p, int root){
+	int n = graph.size();
+	vi used(n, 0);
+	fill(p.begin(), p.end(), -1);
+	vi base(n, 0);
+	for(int i = 0; i < n; i++)
+		base[i] = i;
+	
+	used[root] = 1;
+	int qh = 0, qt = 0;
+	
+	vi q(n, 0);
+	q[qt++] = root;
+	while(qh < qt){
+		int v = q[qh++];
+		for(int to : graph[v]){
+			if(base[v] == base[to] || match[v] == to)
+				continue;
+			if(to == root || match[to] != -1 && p[match[to]] != -1)	{
+				int curbase = lca(match, base, p, v, to);
+				vi blossom(n, 0);
+				markPath(match, base, blossom, p, v, curbase, to);
+				markPath(match, base, blossom, p, to, curbase, v);
+				
+				for(int i = 0; i < n; i++){
+					if(blossom[base[i]]){
+						base[i] = curbase;
+						if(!used[i]){
+							used[i] = true;
+							q[qt++] = i;
+						}
+					}
+				}
+			}
+			else if(p[to] == -1){
+				p[to] = v;
+				if(match[to] == -1)
+					return to;
+				to = match[to];
+				used[to] = true;
+				q[qt++] = to;
+			}
+		}
+	}
+	return -1;
+}
+
+int maxMatching(vector<vi> &graph){
+	int n = graph.size();
+	vi match(n, -1);
+	vi p(n, 0);
+	for(int i = 0; i < n; i++){
+		if(match[i] == -1){
+			int v = findPath(graph, match, p, i);
+			while(v != -1){
+				int pv = p[v];
+				int ppv = match[pv];
+				match[v] = pv;
+				match[pv] = v;
+				v = ppv;
+			}
+		}
+	}
+	
+	int matches = 0;
+	for(int i = 0; i < n; i++)
+		if(match[i] != -1)
+			matches++;
+	//printf("Aqui %d\n", matches);
+	return matches;
+}
+\end{lstlisting}
+\end{multicols}

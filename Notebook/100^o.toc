@@ -16,30 +16,42 @@
 \contentsline {section}{\numberline {2.1}Prefix Sum 1D}{10}
 \contentsline {section}{\numberline {2.2}BIT - Fenwick Tree}{10}
 \contentsline {section}{\numberline {2.3}BIT - Fenwick Tree 2D}{10}
-\contentsline {section}{\numberline {2.4}Segment Tree 2D}{10}
-\contentsline {section}{\numberline {2.5}Convex hull trick 1}{11}
-\contentsline {section}{\numberline {2.6}Convex hull trick 2}{11}
-\contentsline {section}{\numberline {2.7}Convex hull trick 3 - Fully Dynamic}{12}
-\contentsline {chapter}{\numberline {3}Paradigmas}{13}
-\contentsline {chapter}{\numberline {4}Grafos}{14}
-\contentsline {section}{\numberline {4.1}Ford Fulkerson}{14}
-\contentsline {section}{\numberline {4.2}Edmonds Karp}{14}
-\contentsline {section}{\numberline {4.3}Dinic}{14}
-\contentsline {section}{\numberline {4.4}Min cost max flow}{15}
-\contentsline {section}{\numberline {4.5}Stoer-Wagner}{16}
-\contentsline {section}{\numberline {4.6}Tarjan}{16}
-\contentsline {section}{\numberline {4.7}Pontos de articula\IeC {\c c}\IeC {\~a}o}{16}
-\contentsline {section}{\numberline {4.8}LCA (Sparce Table)}{17}
-\contentsline {section}{\numberline {4.9}Posi\IeC {\c c}\IeC {\~a}o de elemento em K passos em um ciclo}{17}
-\contentsline {chapter}{\numberline {5}Matem\IeC {\'a}tica}{18}
-\contentsline {section}{\numberline {5.1}Elimina\IeC {\c c}\IeC {\~a}o de Gauss com o XOR}{18}
-\contentsline {section}{\numberline {5.2}F\IeC {\'o}rmula de Legendre}{18}
-\contentsline {chapter}{\numberline {6}Processamento de Strings}{19}
-\contentsline {section}{\numberline {6.1}Aho-Corasick}{19}
-\contentsline {chapter}{\numberline {7}Geometria Computacional}{20}
-\contentsline {section}{\numberline {7.1}Template - J\IeC {\'u}nior}{20}
-\contentsline {section}{\numberline {7.2}Menor c\IeC {\'\i }rculo}{21}
-\contentsline {section}{\numberline {7.3}Kit de encolhimento - SBC 2016}{22}
-\contentsline {section}{\numberline {7.4}Intersec\IeC {\c c}\IeC {\~a}o c\IeC {\'\i }rculo e segmento}{23}
-\contentsline {chapter}{\numberline {8}Miscel\IeC {\^a}nea}{25}
+\contentsline {section}{\numberline {2.4}BIT - Fenwick Tree 2D - Range Update}{10}
+\contentsline {section}{\numberline {2.5}Segment Tree 2D}{11}
+\contentsline {section}{\numberline {2.6}Convex hull trick 1}{12}
+\contentsline {section}{\numberline {2.7}Convex hull trick 2}{12}
+\contentsline {section}{\numberline {2.8}Convex hull trick 3 - Fully Dynamic}{12}
+\contentsline {section}{\numberline {2.9}Kd-Tree}{13}
+\contentsline {chapter}{\numberline {3}Paradigmas}{15}
+\contentsline {chapter}{\numberline {4}Grafos}{16}
+\contentsline {section}{\numberline {4.1}Ford Fulkerson}{16}
+\contentsline {section}{\numberline {4.2}Edmonds Karp}{16}
+\contentsline {section}{\numberline {4.3}Dinic}{16}
+\contentsline {section}{\numberline {4.4}Min cost max flow}{17}
+\contentsline {section}{\numberline {4.5}Stoer-Wagner}{18}
+\contentsline {section}{\numberline {4.6}Tarjan}{18}
+\contentsline {section}{\numberline {4.7}Pontos de articula\IeC {\c c}\IeC {\~a}o}{18}
+\contentsline {section}{\numberline {4.8}LCA (Sparce Table)}{19}
+\contentsline {section}{\numberline {4.9}Posi\IeC {\c c}\IeC {\~a}o de elemento em K passos em um ciclo}{19}
+\contentsline {section}{\numberline {4.10}Hopcroft Karp}{19}
+\contentsline {section}{\numberline {4.11}Blossom}{20}
+\contentsline {chapter}{\numberline {5}Matem\IeC {\'a}tica}{22}
+\contentsline {section}{\numberline {5.1}Elimina\IeC {\c c}\IeC {\~a}o de Gauss com o XOR}{22}
+\contentsline {section}{\numberline {5.2}F\IeC {\'o}rmula de Legendre}{22}
+\contentsline {section}{\numberline {5.3}N\IeC {\'u}mero de fatores primos de N!}{22}
+\contentsline {section}{\numberline {5.4}Trailing zeros in factorial}{23}
+\contentsline {section}{\numberline {5.5}N\IeC {\'u}mero de divisores de N!}{23}
+\contentsline {chapter}{\numberline {6}Processamento de Strings}{24}
+\contentsline {section}{\numberline {6.1}Aho-Corasick}{24}
+\contentsline {section}{\numberline {6.2}Rabin-Karp}{24}
+\contentsline {chapter}{\numberline {7}Geometria Computacional}{26}
+\contentsline {section}{\numberline {7.1}Template - J\IeC {\'u}nior}{26}
+\contentsline {section}{\numberline {7.2}Menor c\IeC {\'\i }rculo}{27}
+\contentsline {section}{\numberline {7.3}Kit de encolhimento - SBC 2016}{28}
+\contentsline {section}{\numberline {7.4}Intersec\IeC {\c c}\IeC {\~a}o c\IeC {\'\i }rculo e segmento}{29}
+\contentsline {chapter}{\numberline {8}Miscel\IeC {\^a}nea}{31}
+\contentsline {section}{\numberline {8.1}Datas}{31}
+\contentsline {section}{\numberline {8.2}Hash C++11}{31}
+\contentsline {section}{\numberline {8.3}Mo's}{31}
+\contentsline {section}{\numberline {8.4}Problema do histograma}{32}
 \select@language {english}

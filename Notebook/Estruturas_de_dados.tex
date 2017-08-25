@@ -72,6 +72,62 @@ int get(int x1, int y1, int x2, int y2){
 	\end{lstlisting}
 \end{multicols}
 
+\section{BIT - Fenwick Tree 2D - Range Update}
+
+Update em range, consulta em ponto e em range.
+\begin{multicols}{2}
+	\begin{lstlisting}
+#define MAXN 505
+
+ll bit[4][MAXN + 50][MAXN + 50];
+
+void update(int node, int x, int y, ll v){
+	for(; x <= MAXN; x +=x&-x)
+	for(int j = y; j <= MAXN; j+=j&-j)
+	bit[node][x][j] += v;
+}
+
+ll query(int node, int x, int y){
+	ll ans = 0;
+	for(; x; x-=x&-x)
+	for(int j = y; j; j-=j&-j)
+	ans += bit[node][x][j];
+	return ans;
+}
+
+void updateSubMatrix(int x1, int y1, int x2, int y2, ll val){
+	update(0, x1, y1, val);
+	update(0, x1, y2 + 1, -val);
+	update(0, x2 + 1, y1, -val);	
+	update(0, x2+1, y2+1, val);
+	
+	update(1, x1, y1, val*(1-y1));
+	update(1, x1, y2+1, val*y2);
+	update(1, x2+1, y1, val*(y1-1));
+	update(1, x2+1, y2+1, -val*y2);
+	
+	update(2, x1, y1, val*(1-x1));
+	update(2, x1, y2+1, (x1-1)*val);
+	update(2, x2+1, y1, val*x2);
+	update(2, x2+1, y2+1, -x2*val);
+	
+	update(3, x1, y1, (x1-1)*(y1-1)*val);
+	update(3, x1, y2+1, -y2*(x1-1)*val);
+	update(3, x2+1, y1, -x2*(y1-1)*val);
+	update(3, x2+1, y2+1, x2*y2*val);
+}
+
+ll queryPoint(int x, int y){
+	return query(0, x, y) * x * y + query(1, x, y) * x + query(2, x, y) * y + query(3, x, y);
+}
+
+ll querySubMatrix(int x1, int y1, int x2, int y2){
+	return queryPoint(x2, y2) - queryPoint(x1 - 1, y2) - queryPoint(x2, y1 - 1) + queryPoint(x1 - 1, y1 - 1);
+}
+
+\end{lstlisting}
+\end{multicols}
+
 \section{Segment Tree 2D}
 
 Quando a consulta é em uma distância de manhattan d, basta rotacionar o grid 45º.
@@ -287,6 +343,92 @@ struct HullDynamic : public multiset<Line> { // will maintain upper hull for max
 		return l.m * x + l.b;
 	}
 };
+
+\end{lstlisting}
+\end{multicols}
+
+\section{Kd-Tree}
+
+Encontra os K pontos mais próximos de um dado ponto $O(k log(k) log(n))$.
+\begin{multicols}{2}
+	\begin{lstlisting}
+
+#define MAXN 10100
+
+double dist(int x, int y, int xx, int yy){
+	return hypot(x - xx, y - yy);
+}
+
+
+// 2D point object
+struct point {
+	double x, y;
+	point(double x = 0, double y = 0): x(x), y(y) {}	
+};
+
+// the "hyperplane split", use comparators for all dimensions
+bool cmpx(const point& a, const point& b) {return a.x < b.x;}
+bool cmpy(const point& a, const point& b) {return a.y < b.y;}
+
+struct kdtree {
+	point *tree;
+	int n;
+	// constructor
+	kdtree(point p[], int n): tree(new point[n]), n(n) {
+		copy(p, p + n, tree);
+		build(0, n, false);
+	}
+	// destructor
+	~kdtree() {delete[] tree;}
+	// k-nearest neighbor query, O(k log(k) log(n)) on average
+	vector<point> query(double x, double y, int k = 1) {
+		perform_query(x, y, k, 0, n, false); // recurse
+		vector<point> points;
+		while (!pq.empty()) { // collect points
+			points.push_back(*pq.top().second);
+			pq.pop();
+		}
+		reverse(points.begin(), points.end());
+		return points;
+	}
+	private:
+	// build is O(n log n) using divide and conquer
+	void build(int L, int R, bool dvx) {
+		if (L >= R) return;
+		int M = (L + R) / 2;
+		// get median in O(n), split x-coordinate if dvx is true
+		nth_element(tree+L, tree+M, tree+R, dvx?cmpx:cmpy);
+		build(L, M, !dvx); build(M+1, R, !dvx);
+	}
+	
+	// priority queue for KNN, keep the K nearest
+	priority_queue<pair<double, point*> > pq;
+	void perform_query(double x, double y, int k, int L, int R, bool dvx) {
+		if (L >= R) return;
+		int M = (L + R) / 2;
+		double dx = x - tree[M].x;
+		double dy = y - tree[M].y;
+		double delta = dvx ? dx : dy;
+		double dist = dx * dx + dy * dy;
+		// if point is nearer to the kth farthest, put point in queue
+		if (pq.size() < k || dist < pq.top().first) {
+			pq.push(make_pair(dist, &tree[M]));
+			if (pq.size() > k) pq.pop(); // keep k elements only
+		}
+		int nearL = L, nearR = M, farL = M + 1, farR = R;
+		if (delta > 0) { // right is nearer
+			swap(nearL, farL);
+			swap(nearR, farR);
+		}
+		// query the nearer child
+		perform_query(x, y, k, nearL, nearR, !dvx);
+		
+		if (pq.size() < k || delta * delta < pq.top().first)
+		// query the farther child if there might be candidates
+		perform_query(x, y, k, farL, farR, !dvx);
+	}
+};
+
 
 \end{lstlisting}
 \end{multicols}
