@@ -213,3 +213,26 @@ ull factorialDivisors(ull n)
 }
 \end{lstlisting}
 \end{multicols}
+
+\section{Grundy Number}
+Faz o xor de todos os números grundy de todas as pilhas, se for diferente de 0 ganha o jogo.
+\begin{multicols}{2}
+	\begin{lstlisting}
+
+ll mex(unordered_set<ll> st){
+	ll ans = 0;
+	while(st.count(ans)) ans++;
+	return ans;
+}
+
+ll grundy(int x){
+	if(x perde jogo)
+		return 0;
+		
+	unordered_set<ll> st;
+	for(int i = 0; i < l; i++)
+		st.insert(grundy(novoX)); // Transicoes
+	return mex(st);
+}
+\end{lstlisting}
+\end{multicols}

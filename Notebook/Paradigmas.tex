@@ -1,1 +1,222 @@
 \chapter{Paradigmas}
+
+
+\section{Convex hull trick 1}
+
+Quando o X está ordenado. \\
+Inserir retas do tipo Y = A*X + B. \\
+Para máximo adicionar o A e B negativos e quando consultar coloca negativo o valor.
+
+\begin{multicols}{2}
+\begin{lstlisting}
+struct hull{
+	ll A[MAXN];
+	ll B[MAXN];
+	int len, ptr;
+	hull(){
+		len = ptr = 0;
+	}
+
+	void addLine(ll a, ll b){
+		while(len >= 2 && (B[len-2] - B[len-1]) * (a-A[len-1]) >= (B[len-1]-b) * (A[len-1]-A[len-2]))
+			len--;
+		A[len] = a;
+		B[len] = b;
+		len++;
+	}
+
+	ll get(ll x){
+		ptr = min(ptr, len-1);
+		while(ptr+1 < len && A[ptr+1]*x+B[ptr+1] <= A[ptr]*x + B[ptr])
+			ptr++;
+		return A[ptr]*x + B[ptr];
+	}
+};
+\end{lstlisting}
+\end{multicols}
+
+\section{Convex hull trick 2}
+
+Quando o X não está ordenado. 
+
+\begin{multicols}{2}
+\begin{lstlisting}
+class ConvexHullTrick {
+	struct CHTPoint {
+		double x, y, lim;
+	};
+	vector<CHTPoint> pilha;
+	inline double get_intersection(CHTPoint a, CHTPoint b) {
+		double denom = ( double(b.x) - a.x);
+		double num = ( double(b.y) - a.y);
+
+		return -num / denom;
+	}
+	
+	bool ccw(CHTPoint p0, CHTPoint p1, CHTPoint p2) {
+		return ((double)(p1.y-p0.y)*(double)(p2.x-p0.x) > (double)(p2.y-p0.y)*(double)(p1.x-p0.x));
+	}
+	
+	public:
+	
+	void add_line(double a, double b) {
+		CHTPoint novo = {a, b, 0};
+		int tam = pilha.size();
+		while (tam >= 2 && !ccw(pilha[tam-2], pilha[tam-1], novo)) {
+			pilha.pop_back();
+			tam--;
+		}
+		while (tam >= 1 && fabs(pilha[tam-1].x - a) < 1e-8) {
+			pilha.pop_back();
+			tam--;
+		}
+	
+		pilha.push_back(novo);
+		if (tam >= 1) pilha[tam-1].lim = get_intersection(pilha[tam-1], pilha[tam]);
+	}
+	
+	double get_maximum(double x) {
+		int st = 0, ed = pilha.size() - 1;
+		while (st < ed) {
+			int mid = (st+ed)/2;
+			if (pilha[mid].lim < x) st = mid+1;
+			else ed = mid;
+		}
+		return pilha[st].x * x + pilha[st].y;
+	}
+	
+};
+\end{lstlisting}
+\end{multicols}
+
+\section{Convex hull trick 3 - Fully Dynamic}
+
+Sem condições especiais para o A e B
+
+\begin{multicols}{2}
+\begin{lstlisting}
+const ll is_query = -(1LL<<62);
+struct Line {
+	ll m, b;
+	mutable function<const Line*()> succ;
+	bool operator<(const Line& rhs) const {
+		if (rhs.b != is_query) return m < rhs.m;
+		const Line* s = succ();
+		if (!s) return 0;
+		ll x = rhs.m;
+		return b - s->b < (s->m - m) * x;
+	}
+};
+
+struct HullDynamic : public multiset<Line> { // will maintain upper hull for maximum
+	bool bad(iterator y) {
+		auto z = next(y);
+		if (y == begin()) {
+			if (z == end()) return 0;
+			return y->m == z->m && y->b <= z->b;
+		}
+		auto x = prev(y);
+		if (z == end()) return y->m == x->m && y->b <= x->b;
+		return (x->b - y->b)*(z->m - y->m) >= (y->b - z->b)*(y->m - x->m);
+	}
+	void insert_line(ll m, ll b) {
+		auto y = insert({ m, b });
+		y->succ = [=] { return next(y) == end() ? 0 : &*next(y); };
+		if (bad(y)) { erase(y); return; }
+		while (next(y) != end() && bad(next(y))) erase(next(y));
+		while (y != begin() && bad(prev(y))) erase(prev(y));
+	}
+	ll eval(ll x) {
+		auto l = *lower_bound((Line) { x, is_query });
+		return l.m * x + l.b;
+	}
+};
+\end{lstlisting}
+\end{multicols}
+
+\section{Divide and conquer optimization}
+
+Dividir elementos em K pilhas sai de $O(KN^2)$ para $O(KNlogN)$.
+
+\begin{multicols}{2}
+\begin{lstlisting}
+void solve(int i, int left, int right, int kleft, int kright){
+	if(left > right)
+	return;
+	
+	int jmid = (right+left)/2;
+	dp[i][jmid] = 1<<30;
+	int bestk = -1;
+	for(int k = kleft; k <= min(kright, jmid); k++){
+		if(dp[i-1][k] + get(k+1, jmid) < dp[i][jmid]){
+			dp[i][jmid] = dp[i-1][k] + get(k+1, jmid); // Cost function
+			bestk = k;
+		}
+	}
+	
+	solve(i, left, jmid-1, kleft, bestk);
+	solve(i, jmid+1, right, bestk, kright);		
+}
+
+// Chamada fica assim
+for(int i = 1; i <= n; i++) // Casos base
+	dp[1][i] = get(1, i);
+
+for(int i = 2; i <= k; i++)
+	solve(i, 1, n, 1, n);
+\end{lstlisting}
+\end{multicols}
+
+\section{Knuth optimization}
+
+Dividir elementos P elementos em A pilhas.
+
+\begin{multicols}{2}
+\begin{lstlisting}
+for(int i = 0; i <= p + 1; i++)
+	for(int j = 0; j <= a + 1; j++)
+		dpAux[i][j] = 1;
+	
+for(int i = 1; i <= p; i++)
+	dp[i][1] = prefix[i] * i;
+
+for(int i = 0; i <= a; i++)
+	dpAux[p + 1][i] = p;
+
+for(int j = 2; j <= a; j++)
+	for(int i = p; i >= 1; i--){
+		dp[i][j] = 1LL << 61;
+		for(int x = dpAux[i][j - 1]; x <= dpAux[i + 1][j]; x++){
+			if(dp[i][j] >= dp[x][j - 1] + get(x + 1, i) * (i - x)){
+				dp[i][j] = dp[x][j - 1] + get(x + 1, i) * (i - x);
+				dpAux[i][j] = x;					
+			}
+		}
+	}
+
+\end{lstlisting}
+\end{multicols}
+
+\section{Otimização com bitmask}
+
+$dp[i]$ é igual a um bitmask onde o $i$-ésimo bit informa se é possível fazer a soma $i$ usando $x$ elementos, onde $x$ é a posição do bitmask.
+
+\begin{multicols}{2}
+\begin{lstlisting}
+dp[0] = 1;
+for(int i = 0; i < n; i++)
+	for(int j = sum/2; j >= v[i]; j--)
+		dp[j] |= dp[j-v[i]]<<1LL;
+
+int ans = sum/2;
+if(n&1){
+	ll x = 1LL<<(n/2);
+	ll y = 1LL<<(n/2+1);
+	while(!(dp[ans]&x) && !(dp[ans]&y))
+		ans--;
+}
+else
+	while(!(dp[ans]&(1LL<<(n/2))))	
+		ans--;
+\end{lstlisting}
+\end{multicols}

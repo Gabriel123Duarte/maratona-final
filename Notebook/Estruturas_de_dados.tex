@@ -206,147 +206,6 @@ void updatex(int idxx, int lx, int rx, int idxy, int ly, int ry, int px, int py,
 
 	\end{lstlisting}
 \end{multicols}
-
-\section{Convex hull trick 1}
-
-Quando o X está ordenado. \\
-Inserir retas do tipo Y = A*X + B. \\
-Para máximo adicionar o A e B negativos e quando consultar coloca negativo o valor.
-
-\begin{multicols}{2}
-	\begin{lstlisting}
-struct hull{
-	ll A[MAXN];
-	ll B[MAXN];
-	int len, ptr;
-	hull(){
-		len = ptr = 0;
-	}
-	
-	void addLine(ll a, ll b){
-		while(len >= 2 && (B[len-2] - B[len-1]) * (a-A[len-1]) >= (B[len-1]-b) * (A[len-1]-A[len-2]))
-		len--;
-		A[len] = a;
-		B[len] = b;
-		len++;
-	}
-	
-	ll get(ll x){
-		ptr = min(ptr, len-1);
-		while(ptr+1 < len && A[ptr+1]*x+B[ptr+1] <= A[ptr]*x + B[ptr])
-		ptr++;
-		return A[ptr]*x + B[ptr];
-	}
-};
-
-\end{lstlisting}
-\end{multicols}
-
-\section{Convex hull trick 2}
-
-Quando o X não está ordenado. 
-
-\begin{multicols}{2}
-	\begin{lstlisting}
-
-class ConvexHullTrick {
-	struct CHTPoint {
-		double x, y, lim;
-		
-	};
-	vector<CHTPoint> pilha;
-	inline double get_intersection(CHTPoint a, CHTPoint b) {
-		double denom = ( double(b.x) - a.x);
-		double num = ( double(b.y) - a.y);
-		
-		return -num / denom;
-	}
-	
-	bool ccw(CHTPoint p0, CHTPoint p1, CHTPoint p2) {
-		return ((double)(p1.y-p0.y)*(double)(p2.x-p0.x) > (double)(p2.y-p0.y)*(double)(p1.x-p0.x));
-	}
-	
-	public:
-	
-	void add_line(double a, double b) {
-		CHTPoint novo = {a, b, 0};
-		int tam = pilha.size();
-		while (tam >= 2 && !ccw(pilha[tam-2], pilha[tam-1], novo)) {
-			pilha.pop_back();
-			tam--;
-		}
-		while (tam >= 1 && fabs(pilha[tam-1].x - a) < 1e-8) {
-			pilha.pop_back();
-			tam--;
-		}
-		
-		pilha.push_back(novo);
-		if (tam >= 1) pilha[tam-1].lim = get_intersection(pilha[tam-1], pilha[tam]);
-	}
-	
-	double get_maximum(double x) {
-		int st = 0, ed = pilha.size() - 1;
-		while (st < ed) {
-			int mid = (st+ed)/2;
-			if (pilha[mid].lim < x) st = mid+1;
-			else ed = mid;
-		}
-		return pilha[st].x * x + pilha[st].y;
-	}
-	
-};
-
-
-\end{lstlisting}
-\end{multicols}
-
-\section{Convex hull trick 3 - Fully Dynamic}
-
-Sem condições especiais para o A e B
-
-\begin{multicols}{2}
-	\begin{lstlisting}
-
-
-const ll is_query = -(1LL<<62);
-struct Line {
-	ll m, b;
-	mutable function<const Line*()> succ;
-	bool operator<(const Line& rhs) const {
-		if (rhs.b != is_query) return m < rhs.m;
-		const Line* s = succ();
-		if (!s) return 0;
-		ll x = rhs.m;
-		return b - s->b < (s->m - m) * x;
-	}
-};
-struct HullDynamic : public multiset<Line> { // will maintain upper hull for maximum
-	bool bad(iterator y) {
-		auto z = next(y);
-		if (y == begin()) {
-			if (z == end()) return 0;
-			return y->m == z->m && y->b <= z->b;
-		}
-		auto x = prev(y);
-		if (z == end()) return y->m == x->m && y->b <= x->b;
-		return (x->b - y->b)*(z->m - y->m) >= (y->b - z->b)*(y->m - x->m);
-	}
-	void insert_line(ll m, ll b) {
-		auto y = insert({ m, b });
-		y->succ = [=] { return next(y) == end() ? 0 : &*next(y); };
-		if (bad(y)) { erase(y); return; }
-		while (next(y) != end() && bad(next(y))) erase(next(y));
-		while (y != begin() && bad(prev(y))) erase(prev(y));
-	}
-	ll eval(ll x) {
-		auto l = *lower_bound((Line) { x, is_query });
-		return l.m * x + l.b;
-	}
-};
-
-\end{lstlisting}
-\end{multicols}
-
 \section{Kd-Tree}
 
 Encontra os K pontos mais próximos de um dado ponto $O(k log(k) log(n))$.
@@ -428,8 +287,146 @@ struct kdtree {
 		perform_query(x, y, k, farL, farR, !dvx);
 	}
 };
-
-
 \end{lstlisting}
 \end{multicols}
 
+\section{Treap}
+
+Implicit cartesian tree $O(logn)$.
+\begin{multicols}{2}
+	\begin{lstlisting}
+// Prior e size obrigatorios
+// Carregar o que precisa
+struct node{
+	int prior, size, lazy;
+	int val;
+	
+	node *l, *r;
+	node() {}
+	node(int n){
+		prior = rand();
+		size = 1;
+		val = n;
+		lazy = 0;
+		l = r = NULL;
+	}
+};
+
+int size(node *t){
+	return t ? t->size : 0;
+}
+
+void updateSize(node *t){
+	if(t)
+	t->size = 1 + size(t->l) + size(t->r);
+}
+
+// Lazy para inverter intervalo
+void lazy(node *t){
+	if(!t || !t->lazy)
+		return;
+	
+	t->lazy = t->lazy % 2;
+	if(t->lazy){
+		swap(t->r, t->l);
+		if(t->l)
+			t->l->lazy++;
+		if(t->r)
+			t->r->lazy++;
+	}
+	t->lazy = 0;
+}
+
+// Operator +
+void operation(node *t){
+	if(!t)
+		return;
+	lazy(t->l);
+	lazy(t->r);
+	
+	
+	if(t->l)
+		t += juncao com filho esquerda
+	if(t->r)
+		t += juncao com filho direita
+	
+	t += informacao do no atual
+}
+
+void split(node *t, node *&l, node *&r, int pos, int add = 0){
+	if(!t){
+		l = r = NULL;
+		return;
+	}
+	
+	lazy(t);
+	int cur_pos = add + size(t->l);
+	if(cur_pos <= pos)
+		split(t->r, t->r, r, pos, cur_pos + 1), l = t;
+	else
+		split(t->l, l, t->l, pos, add), r = t;
+	updateSize(t);
+	operation(t);
+}
+
+void merge(node *&t, node *l, node *r){
+	lazy(l);
+	lazy(r);
+	if(!l || !r)
+		t = l ? l : r;
+	else if(l->prior > r->prior)
+		merge(l->r, l->r, r), t = l;
+	else
+		merge(r->l, l, r->l), t = r;
+	updateSize(t);
+	operation(t);
+}
+
+// Inverte o range l..r
+void inverter(node *t, int l, int r){
+	node *L, *mid, *R;
+	split(t, L, mid, l - 1);
+	split(mid, t, R, r - l);
+	t->lazy++;
+	merge(mid, L, t);
+	merge(t, mid, R);
+}
+
+// Criacao da Treap na main
+node *Treap;
+for(int i = 0; i < n; i++){
+	if(!i)
+		Treap = new node(v[i]);	
+	else
+		merge(Treap, Treap, new node(v[i]));
+}
+\end{lstlisting}
+\end{multicols}
+
+
+\section{Sparse table}
+
+Suporta $min$, $max$, $gcd$, $lcm$, build em $O(nlogn)$ e query em $O(1)$.
+\begin{multicols}{2}
+	\begin{lstlisting}
+#define MAXN 100100
+#define LOG  17     // ~log2(MAXN)
+
+int arr[MAXN], st[MAXN][LOG];
+
+void build(int n){
+	for(int i = 0; i < n; i++)
+		st[i][0] = arr[i];
+	
+	for(int j = 1; (1 << j) <= n; j++)
+		for(int i = 0; i + (1 << j) - 1 < n; i++)
+			st[i][j] = min(st[i][j - 1], st[i + (1 << (j - 1))][j - 1]);
+}
+
+int query(int l, int r){
+	// Pre processar os logs ou usar __builtin_ctz se o tempo estiver apertado
+	int k = floor(log2((double)r - l + 1));
+	return min(st[l][k], st[r - (1 << k) + 1][k]);
+}
+\end{lstlisting}
+\end{multicols}

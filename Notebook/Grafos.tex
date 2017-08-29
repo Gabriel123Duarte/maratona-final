@@ -611,8 +611,51 @@ int maxMatching(vector<vi> &graph){
 	for(int i = 0; i < n; i++)
 		if(match[i] != -1)
 			matches++;
-	//printf("Aqui %d\n", matches);
 	return matches;
 }
+\end{lstlisting}
+\end{multicols}
+\section{Centroid decomposition}
+
+\begin{multicols}{2}
+	\begin{lstlisting}
+#define MAXN 10000
+vector<int> tree[MAXN];
+int subTree[MAXN], removed[MAXN], parent[MAXN];
+
+int totalV;
+int dfs1(int u, int p){
+	subTree[u] = 1;
+	totalV++;
+	for(auto v : tree[u])
+	if(v != p && !removed[v]){
+		dfs1(v, u);
+		subTree[u] += subTree[v];
+	}
+}
+
+int dfs2(int u, int p){
+	for(auto v : tree[u])
+		if(v != p && !removed[v] && subTree[v] > totalV/2)
+		return dfs2(v, u);
+	return u;
+}
+
+void decompose(int root, int p){
+	totalV = 0;
+	dfs1(root, root);
+	int centroid = dfs2(root, root);
+	if(p == -1)
+		p = centroid;
+	parent[centroid] = p;
+	removed[centroid] = 1;
+	for(auto v : tree[centroid])
+		if(!removed[v] && v != p)
+			decompose(v, centroid);
+	
+}
+
+// Chamar na main
+decompose(0, -1);
 \end{lstlisting}
 \end{multicols}

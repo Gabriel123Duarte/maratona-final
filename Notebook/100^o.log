@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.5.11)  25 AUG 2017 11:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.28)  29 AUG 2017 18:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -760,19 +760,26 @@ Cap\'{\i }tulo 2.
 ]
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 104.
- [11] [12] [13]) (./Paradigmas.tex [14]
+ [11] [12]) (./Paradigmas.tex [13]
 Cap\'{\i }tulo 3.
-) (./Grafos.tex [15
 
-]
+Overfull \vbox (8.70964pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (1.85962pt too high) has occurred while \output is active []
+
+
+[14
+
+] [15]) (./Grafos.tex [16]
 Cap\'{\i }tulo 4.
-[16
+[17
 
-] [17] [18] [19] [20]) (./Matematica.tex [21]
+] [18] [19] [20] [21]) (./Matematica.tex [22]
 Cap\'{\i }tulo 5.
-[22
+[23
 
-]) (./Processamento_de_strings.tex [23]
+] [24]) (./Processamento_de_strings.tex [25]
 Cap\'{\i }tulo 6.
 
 Overfull \vbox (13.70964pt too high) has occurred while \output is active []
@@ -781,15 +788,15 @@ Overfull \vbox (13.70964pt too high) has occurred while \output is active []
 Overfull \vbox (6.85962pt too high) has occurred while \output is active []
 
 
-[24
+[26
 
-]) (./Geometria_computacional.tex [25]
+]) (./Geometria_computacional.tex [27]
 Cap\'{\i }tulo 7.
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <8> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 22.
-[26
+[28
 
-] [27] [28] [29]
+] [29] [30] [31]
 Overfull \hbox (19.83644pt too wide) in paragraph at lines 469--470
 [][] 
  []
@@ -799,16 +806,16 @@ Overfull \hbox (19.83644pt too wide) in paragraph at lines 479--480
 [][] 
  []
 
-) (./Miscelanea.tex [30]
+) (./Miscelanea.tex [32]
 Cap\'{\i }tulo 8.
-[31
+[33
 
-]) [32] (./100^o.aux) ) 
+]) [34] (./100^o.aux) ) 
 Here is how much of TeX's memory you used:
- 6820 strings out of 494929
- 85179 string characters out of 6180142
+ 6908 strings out of 494929
+ 86121 string characters out of 6180142
  1116292 words of memory out of 5000000
- 9979 multiletter control sequences out of 15000+600000
+ 10067 multiletter control sequences out of 15000+600000
  22990 words of font info for 51 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
  37i,10n,58p,321b,1877s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -831,10 +838,10 @@ s/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmsy8.pfb>
-Output written on 100^o.pdf (33 pages, 690385 bytes).
+Output written on 100^o.pdf (35 pages, 702917 bytes).
 PDF statistics:
- 690 PDF objects out of 1000 (max. 8388607)
- 147 compressed objects within 2 object streams
+ 698 PDF objects out of 1000 (max. 8388607)
+ 151 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
