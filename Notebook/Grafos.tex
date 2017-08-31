@@ -659,3 +659,39 @@ void decompose(int root, int p){
 decompose(0, -1);
 \end{lstlisting}
 \end{multicols}
+
+\section{Dijkstra}
+Complexidade $<O((V + E)log E)>$.
+\begin{multicols}{2}
+	\begin{lstlisting}
+#define INF 0x3f3f3f3f
+typedef pair<int, int> ii;
+typedef vector<ii> vii;
+
+vector<vii> graph;
+int V, E; 
+
+void dijkstra(int s){
+	vector<int> dist(V, INF); 
+	dist[s] = 0;
+	priority_queue<ii, vector<ii>, greater<ii> > pq;
+	pq.push(ii(0, s));
+	
+	while(!pq.empty()){
+		int d = pq.top().first, u = pq.top().second;
+		pq.pop();
+		
+		if(d > dist[u])
+		continue;
+		
+		for(int i = 0; i < graph[u].size(); i++){
+			ii v = graph[u][i];
+			if(dist[u] + v.second < dist[v.first]){
+				dist[v.first] = dist[u] + v.second;
+				pq.push(ii(dist[v.first], v.first));
+			}
+		}
+	}
+}	
+	\end{lstlisting}
+\end{multicols}
