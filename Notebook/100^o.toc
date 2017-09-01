@@ -56,16 +56,16 @@
 \contentsline {chapter}{\numberline {6}Processamento de Strings}{27}
 \contentsline {section}{\numberline {6.1}Aho-Corasick}{27}
 \contentsline {section}{\numberline {6.2}Rabin-Karp}{27}
-\contentsline {chapter}{\numberline {7}Geometria Computacional}{29}
-\contentsline {section}{\numberline {7.1}Template - J\IeC {\'u}nior}{29}
-\contentsline {section}{\numberline {7.2}Menor c\IeC {\'\i }rculo}{30}
-\contentsline {section}{\numberline {7.3}Kit de encolhimento - SBC 2016}{31}
-\contentsline {section}{\numberline {7.4}Intersec\IeC {\c c}\IeC {\~a}o c\IeC {\'\i }rculo e segmento}{32}
-\contentsline {section}{\numberline {7.5}Intersec\IeC {\c c}\IeC {\~a}o entre segmentos}{33}
-\contentsline {chapter}{\numberline {8}Miscel\IeC {\^a}nea}{34}
-\contentsline {section}{\numberline {8.1}Datas}{34}
-\contentsline {section}{\numberline {8.2}Hash C++11}{34}
-\contentsline {section}{\numberline {8.3}Mo's}{34}
-\contentsline {section}{\numberline {8.4}Problema do histograma}{35}
-\contentsline {section}{\numberline {8.5}Sliding Window - Mediana}{35}
+\contentsline {chapter}{\numberline {7}Geometria Computacional}{28}
+\contentsline {section}{\numberline {7.1}Template - J\IeC {\'u}nior}{28}
+\contentsline {section}{\numberline {7.2}Menor c\IeC {\'\i }rculo}{29}
+\contentsline {section}{\numberline {7.3}Kit de encolhimento - SBC 2016}{30}
+\contentsline {section}{\numberline {7.4}Intersec\IeC {\c c}\IeC {\~a}o c\IeC {\'\i }rculo e segmento}{31}
+\contentsline {section}{\numberline {7.5}Intersec\IeC {\c c}\IeC {\~a}o entre segmentos}{32}
+\contentsline {chapter}{\numberline {8}Miscel\IeC {\^a}nea}{33}
+\contentsline {section}{\numberline {8.1}Datas}{33}
+\contentsline {section}{\numberline {8.2}Hash C++11}{33}
+\contentsline {section}{\numberline {8.3}Mo's}{33}
+\contentsline {section}{\numberline {8.4}Problema do histograma}{34}
+\contentsline {section}{\numberline {8.5}Sliding Window - Mediana}{34}
 \select@language {english}

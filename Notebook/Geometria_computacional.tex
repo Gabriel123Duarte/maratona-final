@@ -78,8 +78,8 @@ struct Point {
 		public:
 		GeometricUtils(){};
 		static double cross(Point a, Point b, Point c) {
-			double dx1 = (a.x - b.x), dy1 = (a.y - b.y);
-			double dx2 = (c.x - b.x), dy2 = (c.y - b.y);
+			double dx1 = (a.x-b.x), dy1 = (a.y-b.y);
+			double dx2 = (c.x-b.x), dy2 = (c.y-b.y);
 			return (dx1 * dy2 - dx2 * dy1);
 		}
 		static bool above(Point a, Point b, Point c) {
