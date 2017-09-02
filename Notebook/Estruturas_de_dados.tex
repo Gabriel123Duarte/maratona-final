@@ -230,6 +230,109 @@ void updatex(int idxx, int lx, int rx, int idxy, int ly, int ry, int px, int py,
 
 	\end{lstlisting}
 \end{multicols}
+
+\section{Segment Tree 2D Dinâmica}
+Não consegue comprimir usa essa.
+\begin{multicols}{2}
+	\begin{lstlisting}
+
+struct node1{
+	int val;
+	node1 *l, *r;
+	node1(){
+		val = 0;
+		l = r = 0;
+	}
+};
+
+struct node2{
+	node1 *tree;
+	node2 *l, *r;
+	node2(){
+		tree = new node1();
+		l = r = 0;
+	}
+};
+
+int gety(node1 *tree, int ly, int ry, int y1, int y2){
+	if(!tree) return 0;
+	if(ly > y2 || ry < y1)
+	return 0;
+	if(ly >= y1 && ry <= y2)
+	return tree->val;
+	int ans = 0;
+	int mid = (ly+ry)/2;
+	if(tree->l)
+	ans += gety(tree->l, ly, mid, y1, y2);
+	if(tree->r)
+	ans += gety(tree->r, mid+1, ry, y1, y2);
+	return ans;
+}
+
+int getx(node2 *tree, int lx, int rx, int ly, int ry, int x1, int x2, int y1, int y2){
+	if(!tree || !tree->tree) return 0;
+	if(lx > x2 || rx < x1)
+	return 0;
+	if(lx >= x1 && rx <= x2)
+	return gety(tree->tree, ly, ry, y1, y2);
+	int ans = 0;
+	int mid = (lx+rx)/2;
+	if(tree->l)
+	ans += getx(tree->l, lx, mid, ly, ry, x1, x2, y1, y2);
+	if(tree->r)
+	ans += getx(tree->r, mid+1, rx, ly, ry, x1, x2, y1, y2);
+	return ans;
+}
+
+void updatey(node1 *tree, node1 *l, node1 *r, int lx, int rx, int ly, int ry, int py, int val){
+	if(ly > py || ry < py)
+	return;
+	if(ly == ry){
+		if(lx == rx)
+		tree->val = val;
+		else
+		tree->val = (!l?0:l->val) + (!r?0:r->val);
+		return;
+	}
+	int mid = (ly+ry)/2;
+	if(py <= mid){
+		if(!tree->l) tree->l = new node1();
+		l = l?l->l?l->l:0:0;
+		r = r?r->l?r->l:0:0;
+		updatey(tree->l, l, r, lx, rx, ly, mid, py, val);
+	}
+	else{
+		if(!tree->r) tree->r = new node1();
+		l = l?l->r?l->r:0:0;
+		r = r?r->r?r->r:0:0;
+		updatey(tree->r, l, r, lx, rx, mid+1, ry, py, val);
+	}
+	tree->val = (tree->l?tree->l->val:0) + (tree->r?tree->r->val:0);
+}
+
+void updatex(node2* tree, int lx, int rx, int ly, int ry, int px, int py, int val){
+	if(lx > px || rx < px)
+	return;
+	if(lx != rx){
+		int mid = (lx+rx)/2;
+		if(px <= mid){
+			if(!tree->l) tree->l = new node2();
+			updatex(tree->l, lx, mid, ly, ry, px, py, val);
+		}
+		else{
+			if(!tree->r) tree->r = new node2();
+			updatex(tree->r, mid+1, rx, ly, ry, px, py, val);	
+		}		
+	}
+	updatey(tree->tree, !tree->l? 0 : tree->l->tree, !tree->r? 0 : tree->r->tree, lx, rx, ly, ry, py, val);
+}
+
+// IN MAIN
+node2 *seg = new node2();
+
+\end{lstlisting}
+\end{multicols}
+
 \section{Kd-Tree}
 
 Encontra os K pontos mais próximos de um dado ponto $O(k log(k) log(n))$.
