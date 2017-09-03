@@ -152,6 +152,56 @@ ll querySubMatrix(int x1, int y1, int x2, int y2){
 \end{lstlisting}
 \end{multicols}
 
+\section{BIT - Fenwick Tree 2D - Comprimida}
+
+Operações possíveis com x e y até $10^5$
+\begin{itemize}
+\itemsep0em
+\item Inserir 1 em uma posição do grid.
+\item Remover 1 em uma posição do grid.
+\item Contar a quantidade de 1's em um retângulo.
+\end{itemize}
+
+$O(Qlog^2N)$.
+
+
+\begin{multicols}{2}
+	\begin{lstlisting}
+
+#include <ext/pb_ds/assoc_container.hpp>
+#include <ext/pb_ds/tree_policy.hpp>
+using namespace std;
+using namespace __gnu_pbds;
+typedef pair<int, int> pii;
+typedef tree<pii, null_type, less<pii>, rb_tree_tag, tree_order_statistics_node_update> OST;
+
+#define N 100010
+OST bit[N];
+void insert(int x, int y){
+	for(int i = x; i < N; i+=i&-i)
+	bit[i].insert(ii(y,x));
+}
+
+void remove(int x, int y){
+	for(int i = x; i < LIM; i+=i&-i)
+	bit[i].erase(ii(y,x));
+}
+
+int query(int x, int y){
+	int ans = 0;
+	for(int i = x; i; i-=i&-i)
+	ans += bit[i].order_of_key(ii(y+1, 0));
+	return ans;
+}
+
+int query(int x1, int y1, int x2, int y2){
+	return query(x2, y2) - query(x2, y1-1) - query(x1-1, y2) + query(x1-1, y1-1);
+}
+
+
+\end{lstlisting}
+\end{multicols}
+
 \section{Segment Tree 2D}
 
 Quando a consulta é em uma distância de manhattan d, basta rotacionar o grid 45º.
