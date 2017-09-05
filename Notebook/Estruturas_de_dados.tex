@@ -245,6 +245,74 @@ int query(int x1, int y1, int x2, int y2){
 \end{lstlisting}
 \end{multicols}
 
+\section{Segment Tree 1D - Lazy Propagation}
+
+O build está gerando uma árvore com zeros, alterar quando houver valores iniciais
+
+\begin{multicols}{2}
+	\begin{lstlisting}
+#define NMAX 100010
+#define mid ((l + r) / 2)
+#define ll long long
+
+ll tree[NMAX * 4], lazy[NMAX * 4];
+
+void build(int idx, int l, int r){
+	lazy[idx] = 0;
+	tree[idx] = 0;
+	
+	if (l == r)
+	return;
+	
+	build(idx * 2, l, mid);
+	build(idx * 2 + 1, mid + 1, r);
+}
+
+void propagation(int idx, int l, int r){
+	if (lazy[idx]){
+		tree[idx] += (ll)(r - l + 1) * lazy[idx];
+		
+		if (l != r){
+			lazy[idx * 2] += lazy[idx];
+			lazy[idx * 2 + 1] += lazy[idx];
+		}
+		
+		lazy[idx] = 0;
+	}
+}
+
+void update(int idx, int l, int r, int i, int j, int val){
+	propagation(idx, l, r);
+	
+	if (j < l or i > r)
+	return;
+	
+	if (l >= i && r <= j){	
+		lazy[idx] += val;
+		propagation(idx, l, r);
+		return;
+	}
+	
+	update(idx * 2, l, mid, i, j, val);
+	update(idx * 2 + 1, mid + 1, r, i, j, val);
+	tree[idx] = tree[idx * 2] + tree[idx * 2 + 1];
+}
+
+ll get(int idx, int l, int r, int i, int j){
+	propagation(idx, l, r);
+	
+	if (j < l or i > r)
+	return 0;
+	
+	if (l >= i && r <= j)
+	return tree[idx];
+	
+	return get(idx * 2, l, mid, i, j) + get(idx * 2 + 1, mid + 1, r, i, j);
+}
+
+\end{lstlisting}
+\end{multicols}
+
 \section{Segment Tree 2D}
 
 Quando a consulta é em uma distância de manhattan d, basta rotacionar o grid 45º.

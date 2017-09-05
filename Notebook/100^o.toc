@@ -20,13 +20,14 @@
 \contentsline {section}{\numberline {2.5}BIT - Fenwick Tree 2D}{11}
 \contentsline {section}{\numberline {2.6}BIT - Fenwick Tree 2D - Range Update}{11}
 \contentsline {section}{\numberline {2.7}BIT - Fenwick Tree 2D - Comprimida}{11}
-\contentsline {section}{\numberline {2.8}Segment Tree 2D}{12}
-\contentsline {section}{\numberline {2.9}Segment Tree 2D Din\IeC {\^a}mica}{13}
-\contentsline {section}{\numberline {2.10}Kd-Tree}{13}
-\contentsline {section}{\numberline {2.11}Treap / Cartesian Tree}{14}
-\contentsline {section}{\numberline {2.12}Treap / Cartesian Tree Impl\IeC {\'\i }cita}{15}
-\contentsline {section}{\numberline {2.13}Sparse table}{16}
-\contentsline {section}{\numberline {2.14}Persistent Segment Tree}{16}
+\contentsline {section}{\numberline {2.8}Segment Tree 1D - Lazy Propagation}{12}
+\contentsline {section}{\numberline {2.9}Segment Tree 2D}{12}
+\contentsline {section}{\numberline {2.10}Segment Tree 2D Din\IeC {\^a}mica}{13}
+\contentsline {section}{\numberline {2.11}Kd-Tree}{14}
+\contentsline {section}{\numberline {2.12}Treap / Cartesian Tree}{15}
+\contentsline {section}{\numberline {2.13}Treap / Cartesian Tree Impl\IeC {\'\i }cita}{15}
+\contentsline {section}{\numberline {2.14}Sparse table}{16}
+\contentsline {section}{\numberline {2.15}Persistent Segment Tree}{16}
 \contentsline {chapter}{\numberline {3}Paradigmas}{18}
 \contentsline {section}{\numberline {3.1}Convex hull trick 1}{18}
 \contentsline {section}{\numberline {3.2}Convex hull trick 2}{18}
