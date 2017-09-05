@@ -103,3 +103,31 @@ for(int i = 0; i + s.size()-1 < t.size(); i++){
 }
 \end{lstlisting}
 \end{multicols}
+\section{Repetend: menor período de uma string}
+
+Menor período de uma string em $O(n)$.
+
+\begin{multicols}{2}
+	\begin{lstlisting}
+
+#define MAXN 100010
+
+int repetend(string s){
+	int n = s.size();
+	int nxt[n+1];
+	nxt[0] = -1;
+	for(int i = 1; i <= n; i++){
+		int j = nxt[i-1];
+		while(j>=0 && s[j] != s[i-1])
+			j = nxt[j];
+		nxt[i] = j+1;
+	}
+	int a = n-nxt[n];
+	if(n%a==0)
+		return a;
+	return n;	
+}
+
+\end{lstlisting}
+\end{multicols}
+
