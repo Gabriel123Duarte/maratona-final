@@ -268,13 +268,53 @@ T baby(T a, T b, T m){
 \end{lstlisting}
 \end{multicols}
 
+\section{Números de Catalan}
+Computa os números de Catalan de 0 até $n$ em $(nlogn)$.\\
+Olhar mais exemplos no CP3 pg. 206
+\begin{itemize}
+\itemsep0em
+\item $Cat(n)$ = número de árvores binárias completas de $n$+1 folhas ou 2*$n$ + 1 elementos
+\item $Cat(n)$ = número de combinações válidas para $n$ pares de parêntesis.
+\item $Cat(n)$ = número de formas que o parentesiação de $n$+1 elementos pode ser feito.
+\item $Cat(n)$ = número de triangulações de um polígono convexo de $n$+2 lados.
+\item $Cat(n)$ = número de caminhos monotônicos discretos para ir de (0,0) a (n,n).
+\end{itemize}
+
+\begin{multicols}{2}
+\begin{lstlisting}
+
+ll cat[MAXN];
+void catalan(int n){
+	cat[0] = cat[1] = 1;
+	ll g;
+	for(int i = 2; i<=n; i++){
+		g = gcd(2*(2*i-1), i+1);
+		cat[i] = ((2*(2*i-1))/g)*(cat[i-1]/((i+1)/g));
+	}
+}	
+
+\end{lstlisting}
+\end{multicols}
+
 \section{Fórmulas úteis}
-
-
+Olhar mais fórmulas no CP3 pg. 345
 \begin{itemize}
 \itemsep0em
 \item Soma dos n primeiros fibonacci: $f(n+2)-1$.
 \item Soma dos n primeiros fibonacci ao quadrado: $f(n)*f(n+1)$.
 \item Soma dos quadrados de todos números de 1 até n:   $n*(n+1)*(2n+1)/6$.
+\item Fórmula de Cayley: existem $n^{n-2}$ árvores geradoras em um grafo completo de $n$ vértices.
+\item Desarranjo: o número $der(n)$ de permutações de $n$ elementos em que nenhum dos elementos fica na posição original é dado por:
+$der(n) = (n-1)(der(n-1)+der(n-2))$, onde $der(0) = 1$ e $der(1) = 0$.
+\item Teorema de Erdos Gallai: é condição suficiente para que uma array represente os graus dos vértices de um nó: $d_1 \geq d_2 \geq ... \geq d_n$, $\sum_{i=1}^{n}d_i = 2k$, $\sum_{i=1}^{k}d_i \leq k(k-1) + \sum_{i=k+1}^{k}min(d_i, k)$.
+\item Fórmula de Euler para grafos planares: $V-E+F=2$, onde $F$ é o número de faces.
+\item Círculo de Moser: o número de peças em que um círculo pode ser divido por cordas ligadas a $n$ pontos tais que não se tem 3 cordas internamente concorrentes é dada por: $g(n) = C_{4}^{n}+C_{2}^{n}+1$.
+\item Teorema de Pick: se $I$ é o número de pontos inteiros dentro de um polígono, $A$ a área do polígono e $b$ o número de pontos inteiros na borda, então $A = i + b/2 - 1$ .
+\item O número de árvores geradores em um grafo bipartido completo é $m^{n-1} \times n^{m-1}$.
+\item Teorema de Kirchhoff: o número de árvores geradoras em um grafo é igual ao cofator da sua matriz laplaciana $L$. $L=D-A$, em que $D$ é uma matriz diagonal em que $a_{ii} = d_i$ e $A$ é a matriz de adjacência.
+\item Teorema de Konig: a cobertura mínima de vértices em um grafo bipartido (o número mínimo de vértices a serem removidos para se remover todas as arestas) é igual ao pareamento máximo do grafo.
+\item Teorema de Zeckendorf: qualquer inteiro positivo pode ser representado pela soma de números de Fibonacci que não inclua dois números consecutivos. Para achar essa soma, usar o algoritmo guloso, sempre procurando o maior número de fibonacci menor que o número.
+\item Teorema de Dilworth: em um DAG que representa um conjunto parcialmente ordenado, uma cadeia é um subconjunto de vértices tais que todos os pares dentro dele são comparáveis; uma anti-cadeia é um subconjunto tal que todos os pares de vértices dele são não comparáveis. O teorema afirma que a partição mínima em cadeias é igual ao comprimenton da maior anti-cadeia. Para computar, criar um grafo bipartido: para cada vértice $x$, duplicar para $u_x$ e $v_x$. Uma aresta $x \rightarrow y$ é escrita como $u_x \rightarrow v_y$. O tamanho da partição mínima, também chamada de largura do conjunto, é $N-$ o emparelhamento máximo.
+\item Teorema de Mirsky: semelhante ao teorema de Dilworth, o tamanho da partição mínima em anti-cadeias é igual ao comprimento da maior cadeia.
 \end{itemize}
 

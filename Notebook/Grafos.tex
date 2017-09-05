@@ -450,7 +450,7 @@ for(int j = 0; j < LOG; j++)
 
 \section{Hopcroft Karp}
 
-Maior matching em grafo bipartido.q	
+Maior matching em grafo bipartido. $O(E*sqrt(V))$
 
 \begin{multicols}{2}
 	\begin{lstlisting}
@@ -657,6 +657,120 @@ void decompose(int root, int p){
 
 // Chamar na main
 decompose(0, -1);
+\end{lstlisting}
+\end{multicols}
+
+\section{Heavy-Light Decomposition}
+Divide a árvore em $logn$ cadeias com isso pode responder consultas de máximo/mínimo/soma em um caminho entre dois vértices em $log^2n$ se utilizar uma Segment Tree.
+\begin{multicols}{2}
+	\begin{lstlisting}
+
+#define MAXN 100100
+#define LOG 20
+
+vector<ii> tree[MAXN];
+int parent[MAXN][LOG], height[MAXN], subTree[MAXN];
+int head[MAXN], chainNode[MAXN], posArray[MAXN];
+int cnt, pos;
+int pesos[MAXN];
+
+void dfs(int u, int p, int h){
+	parent[u][0] = p;
+	height[u] = h;
+	subTree[u] = 1;
+	
+	for(int i = 1; i < LOG; i++)
+	if(parent[u][i-1] != -1)
+	parent[u][i] = parent[parent[u][i-1]][i-1];
+	
+	for(auto v : tree[u])
+	if(v.fst != p){
+		dfs(v.fst, u, h+1);
+		subTree[u] += subTree[v.fst];
+	}
+}
+
+void hld(int u, int p, int val){
+	if(head[cnt] == -1)
+	head[cnt] = u;
+	chainNode[u] = cnt;
+	posArray[u] = pos;
+	pesos[pos++] = val;
+	
+	int id = -1, sz = -1, edge;
+	for(auto v : tree[u])
+	if(v.fst != p && subTree[v.fst] > sz){
+		sz = subTree[v.fst];
+		id = v.fst;
+		edge = v.snd;
+	}
+	
+	if(id != -1)
+	hld(id, u, edge);
+	
+	for(auto v : tree[u])
+	if(v.fst != p && v.fst != id){
+		cnt++;
+		hld(v.fst, u, v.snd);
+	}
+}
+
+int getLca(int u, int v){
+	if(height[u] > height[v])
+	swap(u, v);
+	for(int i = LOG-1; i >= 0; i--)
+	if(parent[v][i] != -1 && height[parent[v][i]] >= height[u])
+	v = parent[v][i];
+	
+	if(v == u)
+	return u;
+	
+	for(int i = LOG-1; i >= 0; i--)
+	if(parent[u][i] != parent[v][i]){
+		v = parent[v][i];
+		u = parent[u][i];
+	}
+	return parent[u][0];
+}
+
+// get() eh a estrutura de dados que sera utilizada
+int solve(int u, int v){
+	int chainU = chainNode[u], chainV = chainNode[v];
+	int ans = 0;
+	
+	while(1){
+		chainU = chainNode[u];
+		if(chainU == chainV){
+			if(u == v)
+			break;
+			ans = max(ans, get(posArray[v]+1, posArray[u]));
+			break;
+		}		
+		ans = max(ans, get(posArray[head[chainU]], posArray[u]));
+		u = head[chainU];
+		u = parent[u][0];
+	}
+	
+	return ans;
+}
+
+// Maior aresta entre o path u-v
+int solve(int u, int v, int lca){
+	if(u == v)
+	return 0;
+	return max(solve(u, lca), solve(v, lca));
+}
+
+// IN MAIN
+memset(parent, -1, sizeof parent);
+memset(head, -1, sizeof head);
+cnt = pos = 0;
+dfs(0, 0, 0);
+hld(0, 0, 0);
+// Construir alguma estrutura de consulta em range no array pesos
+// Ele tem tamanho pos, pode ser Segtree, SparseTable, BIT, etc.
+// build(pos); 
+
 \end{lstlisting}
 \end{multicols}
 
