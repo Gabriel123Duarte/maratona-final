@@ -896,7 +896,7 @@ void solve(){
 
 \section{Wavelet Tree}
 
-K-ésimo menor elemento de um range, número de ocorrências de X no em um range e número de elementos em um range que são menores que ou iguais a X. $O(logn)$.
+K-ésimo menor elemento de um range, número de ocorrências de X no em um range, número de elementos em um range que são menores que ou iguais a X e soma dos elementos menores que X em um range $O(logn)$.
 \begin{multicols}{2}
 	\begin{lstlisting}
 
@@ -953,6 +953,15 @@ struct wavelet_tree{
 		if(k <= mid) return this->l->count(lb+1, rb, k);
 		return this->r->count(l-lb, r-rb, k);
 	}
+	
+	//sum of nos in [l ,r] less than or equal to k
+	int sumk(int l, int r, int k) {
+		if(l > r or k < lo) return 0;
+		if(hi <= k) return c[r] - c[l-1];
+		int lb = b[l-1], rb = b[r];
+		return this->l->sumk(lb+1, rb, k) + this->r->sumk(l-lb, r-rb, k);
+	}
+	
 	~wavelet_tree(){
 		delete l;
 		delete r;
