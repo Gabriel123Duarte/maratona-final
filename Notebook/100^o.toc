@@ -28,55 +28,56 @@
 \contentsline {section}{\numberline {2.13}Treap / Cartesian Tree Impl\IeC {\'\i }cita}{15}
 \contentsline {section}{\numberline {2.14}Sparse table}{16}
 \contentsline {section}{\numberline {2.15}Persistent Segment Tree}{16}
-\contentsline {chapter}{\numberline {3}Paradigmas}{18}
-\contentsline {section}{\numberline {3.1}Convex hull trick 1}{18}
-\contentsline {section}{\numberline {3.2}Convex hull trick 2}{18}
-\contentsline {section}{\numberline {3.3}Convex hull trick 3 - Fully Dynamic}{19}
-\contentsline {section}{\numberline {3.4}Divide and conquer optimization}{19}
-\contentsline {section}{\numberline {3.5}Knuth optimization}{19}
-\contentsline {section}{\numberline {3.6}Otimiza\IeC {\c c}\IeC {\~a}o com bitmask}{19}
-\contentsline {chapter}{\numberline {4}Grafos}{21}
-\contentsline {section}{\numberline {4.1}Ford Fulkerson}{21}
-\contentsline {section}{\numberline {4.2}Edmonds Karp}{21}
-\contentsline {section}{\numberline {4.3}Dinic}{21}
-\contentsline {section}{\numberline {4.4}Min cost max flow}{22}
-\contentsline {section}{\numberline {4.5}Stoer-Wagner}{23}
-\contentsline {section}{\numberline {4.6}Tarjan}{23}
-\contentsline {section}{\numberline {4.7}Pontos de articula\IeC {\c c}\IeC {\~a}o}{23}
-\contentsline {section}{\numberline {4.8}LCA (Sparce Table)}{24}
-\contentsline {section}{\numberline {4.9}Posi\IeC {\c c}\IeC {\~a}o de elemento em K passos em um ciclo}{24}
-\contentsline {section}{\numberline {4.10}Hopcroft Karp}{24}
-\contentsline {section}{\numberline {4.11}Blossom}{25}
-\contentsline {section}{\numberline {4.12}Centroid decomposition}{26}
-\contentsline {section}{\numberline {4.13}Heavy-Light Decomposition}{26}
-\contentsline {section}{\numberline {4.14}Dijkstra}{27}
-\contentsline {section}{\numberline {4.15}Ahu - Tree isomorfismo}{27}
-\contentsline {chapter}{\numberline {5}Matem\IeC {\'a}tica}{29}
-\contentsline {section}{\numberline {5.1}Elimina\IeC {\c c}\IeC {\~a}o de Gauss com o XOR}{29}
-\contentsline {section}{\numberline {5.2}F\IeC {\'o}rmula de Legendre}{29}
-\contentsline {section}{\numberline {5.3}N\IeC {\'u}mero de fatores primos de N!}{29}
-\contentsline {section}{\numberline {5.4}Trailing zeros in factorial}{30}
-\contentsline {section}{\numberline {5.5}N\IeC {\'u}mero de divisores de N!}{30}
-\contentsline {section}{\numberline {5.6}Grundy Number}{31}
-\contentsline {section}{\numberline {5.7}Baby-Step Giant-Step para Logaritmo Discreto}{31}
-\contentsline {section}{\numberline {5.8}N\IeC {\'u}meros de Catalan}{31}
-\contentsline {section}{\numberline {5.9}F\IeC {\'o}rmulas \IeC {\'u}teis}{31}
-\contentsline {chapter}{\numberline {6}Processamento de Strings}{33}
-\contentsline {section}{\numberline {6.1}Aho-Corasick}{33}
-\contentsline {section}{\numberline {6.2}Rabin-Karp}{33}
-\contentsline {section}{\numberline {6.3}Repetend: menor per\IeC {\'\i }odo de uma string}{34}
-\contentsline {chapter}{\numberline {7}Geometria Computacional}{35}
-\contentsline {section}{\numberline {7.1}Template - J\IeC {\'u}nior}{35}
-\contentsline {section}{\numberline {7.2}Menor c\IeC {\'\i }rculo}{36}
-\contentsline {section}{\numberline {7.3}Kit de encolhimento - SBC 2016}{37}
-\contentsline {section}{\numberline {7.4}Intersec\IeC {\c c}\IeC {\~a}o c\IeC {\'\i }rculo e segmento}{38}
-\contentsline {section}{\numberline {7.5}Intersec\IeC {\c c}\IeC {\~a}o entre segmentos}{39}
-\contentsline {section}{\numberline {7.6}Closest pair problem}{39}
-\contentsline {section}{\numberline {7.7}\IeC {\'A}rea de uni\IeC {\~a}o de ret\IeC {\^a}ngulo}{40}
-\contentsline {chapter}{\numberline {8}Miscel\IeC {\^a}nea}{41}
-\contentsline {section}{\numberline {8.1}Datas}{41}
-\contentsline {section}{\numberline {8.2}Hash C++11}{41}
-\contentsline {section}{\numberline {8.3}Mo's}{41}
-\contentsline {section}{\numberline {8.4}Problema do histograma}{42}
-\contentsline {section}{\numberline {8.5}Sliding Window - Mediana}{42}
+\contentsline {section}{\numberline {2.16}Wavelet Tree}{17}
+\contentsline {chapter}{\numberline {3}Paradigmas}{19}
+\contentsline {section}{\numberline {3.1}Convex hull trick 1}{19}
+\contentsline {section}{\numberline {3.2}Convex hull trick 2}{19}
+\contentsline {section}{\numberline {3.3}Convex hull trick 3 - Fully Dynamic}{20}
+\contentsline {section}{\numberline {3.4}Divide and conquer optimization}{20}
+\contentsline {section}{\numberline {3.5}Knuth optimization}{20}
+\contentsline {section}{\numberline {3.6}Otimiza\IeC {\c c}\IeC {\~a}o com bitmask}{20}
+\contentsline {chapter}{\numberline {4}Grafos}{22}
+\contentsline {section}{\numberline {4.1}Ford Fulkerson}{22}
+\contentsline {section}{\numberline {4.2}Edmonds Karp}{22}
+\contentsline {section}{\numberline {4.3}Dinic}{22}
+\contentsline {section}{\numberline {4.4}Min cost max flow}{23}
+\contentsline {section}{\numberline {4.5}Stoer-Wagner}{24}
+\contentsline {section}{\numberline {4.6}Tarjan}{24}
+\contentsline {section}{\numberline {4.7}Pontos de articula\IeC {\c c}\IeC {\~a}o}{24}
+\contentsline {section}{\numberline {4.8}LCA (Sparce Table)}{25}
+\contentsline {section}{\numberline {4.9}Posi\IeC {\c c}\IeC {\~a}o de elemento em K passos em um ciclo}{25}
+\contentsline {section}{\numberline {4.10}Hopcroft Karp}{25}
+\contentsline {section}{\numberline {4.11}Blossom}{26}
+\contentsline {section}{\numberline {4.12}Centroid decomposition}{27}
+\contentsline {section}{\numberline {4.13}Heavy-Light Decomposition}{27}
+\contentsline {section}{\numberline {4.14}Dijkstra}{28}
+\contentsline {section}{\numberline {4.15}Ahu - Tree isomorfismo}{28}
+\contentsline {chapter}{\numberline {5}Matem\IeC {\'a}tica}{30}
+\contentsline {section}{\numberline {5.1}Elimina\IeC {\c c}\IeC {\~a}o de Gauss com o XOR}{30}
+\contentsline {section}{\numberline {5.2}F\IeC {\'o}rmula de Legendre}{30}
+\contentsline {section}{\numberline {5.3}N\IeC {\'u}mero de fatores primos de N!}{30}
+\contentsline {section}{\numberline {5.4}Trailing zeros in factorial}{31}
+\contentsline {section}{\numberline {5.5}N\IeC {\'u}mero de divisores de N!}{31}
+\contentsline {section}{\numberline {5.6}Grundy Number}{32}
+\contentsline {section}{\numberline {5.7}Baby-Step Giant-Step para Logaritmo Discreto}{32}
+\contentsline {section}{\numberline {5.8}N\IeC {\'u}meros de Catalan}{32}
+\contentsline {section}{\numberline {5.9}F\IeC {\'o}rmulas \IeC {\'u}teis}{32}
+\contentsline {chapter}{\numberline {6}Processamento de Strings}{34}
+\contentsline {section}{\numberline {6.1}Aho-Corasick}{34}
+\contentsline {section}{\numberline {6.2}Rabin-Karp}{34}
+\contentsline {section}{\numberline {6.3}Repetend: menor per\IeC {\'\i }odo de uma string}{35}
+\contentsline {chapter}{\numberline {7}Geometria Computacional}{36}
+\contentsline {section}{\numberline {7.1}Template - J\IeC {\'u}nior}{36}
+\contentsline {section}{\numberline {7.2}Menor c\IeC {\'\i }rculo}{37}
+\contentsline {section}{\numberline {7.3}Kit de encolhimento - SBC 2016}{38}
+\contentsline {section}{\numberline {7.4}Intersec\IeC {\c c}\IeC {\~a}o c\IeC {\'\i }rculo e segmento}{39}
+\contentsline {section}{\numberline {7.5}Intersec\IeC {\c c}\IeC {\~a}o entre segmentos}{40}
+\contentsline {section}{\numberline {7.6}Closest pair problem}{40}
+\contentsline {section}{\numberline {7.7}\IeC {\'A}rea de uni\IeC {\~a}o de ret\IeC {\^a}ngulo}{41}
+\contentsline {chapter}{\numberline {8}Miscel\IeC {\^a}nea}{42}
+\contentsline {section}{\numberline {8.1}Datas}{42}
+\contentsline {section}{\numberline {8.2}Hash C++11}{42}
+\contentsline {section}{\numberline {8.3}Mo's}{42}
+\contentsline {section}{\numberline {8.4}Problema do histograma}{43}
+\contentsline {section}{\numberline {8.5}Sliding Window - Mediana}{43}
 \select@language {english}
