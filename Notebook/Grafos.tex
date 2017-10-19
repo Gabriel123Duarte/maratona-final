@@ -343,21 +343,21 @@ vector<int> graph[MAXN];
 int in[MAXN], low[MAXN], vis[MAXN], cnt;
 vector<int> points;
 
-void dfs(int u int root){
+void dfs(int u, int p, int root){
 	in[u] = low[u] = cnt++;
 	vis[u] = 1;
 	int total = 0;	
 	bool ok = 0;
 	for(auto v : graph[u]){
 		if(!vis[v]){
-			dfs(v, root);
+			dfs(v, u, root);
 			low[u] = min(low[u], low[v]);
 			total++;
 			if(low[v] >= in[u])
 				ok = 1;
 			// if(low[v] > in[u]) u-v eh uma ponte
 		}
-		else
+		else if(v != p)
 			low[u] = min(low[u], in[v]);
 		
 	}
