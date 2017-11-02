@@ -130,4 +130,124 @@ int repetend(string s){
 
 \end{lstlisting}
 \end{multicols}
+\section{Suffix Array}
+
+\begin{multicols}{2}
+\begin{lstlisting}
+#define MAXN 100100
+int suffix[MAXN];
+int RA[MAXN], aux[MAXN], lcp[MAXN], invSuffix[MAXN], c[MAXN];
+// Lembrar de colocar o ultimo caractere alguem menor que o alfabeto
+// A..Z pode usar $
+// a..z pode usar {
+string p; 
+
+// O(n^2 logn)
+bool cmpSlow(int a, int b){
+	return p.substr(a) < p.substr(b);
+}
+	
+void saSlow(){
+	for(int i = 0; i < p.size(); i++)
+		suffix[i] = i;
+	sort(suffix, suffix+p.size(), cmpSlow);
+}
+	
+void lcpSlow(){
+	lcp[p.size()-1] = 0;
+	for(int i = 0; i < p.size()-1; i++){
+		int l = 0;
+		while(p[suffix[i]+l] == p[suffix[i+1]+l]) l++;
+		lcp[i] = l;
+	}
+}
+	
+// O(n log^2(n)) - Se usar o sort()
+// O(n logn)     - Se usar countingSort
+int n;
+void countingSort(int k){
+	memset(c, 0, sizeof c);
+	int maxi = max(300, n);
+	for(int i = 0; i < n; i++)
+		c[RA[i+k]]++;
+	int sum = 0;
+	for(int i = 0; i < maxi; i++){
+		int aux = c[i];
+		c[i] = sum;
+		sum += aux;
+	}
+	for(int i = 0; i < n; i++)
+		aux[c[RA[suffix[i]+k]]++] = suffix[i];
+	for(int i = 0; i < n; i++)
+		suffix[i] = aux[i];
+}
+	
+void saFast(){
+	n = p.size();
+	memset(RA, 0, sizeof RA);
+	for(int i = 0; i < n; i++){
+		suffix[i] = i;
+		RA[i] = p[i];
+	}
+	
+	for(int k = 1; k < n; k <<= 1){
+		countingSort(k); // Ordena por second
+		countingSort(0); // Ordena por first
+		
+		aux[suffix[0]] = 0;
+		int newRa = 0;
+		for(int i = 1; i < n; i++){
+			if(RA[suffix[i]] == RA[suffix[i-1]] && 	RA[suffix[i]+k] == RA[suffix[i-1]+k])
+				aux[suffix[i]] = newRa;
+			else
+				aux[suffix[i]] = ++newRa;
+		}
+		for(int i = 0; i < n; i++)
+			RA[i] = aux[i];
+		if(RA[suffix[n-1]] == n-1)
+			break;
+	}
+}
+	
+void lcpFast(){
+	lcp[n-1] = 0;
+	for(int i = 0; i < n; i++)
+		invSuffix[suffix[i]] = i;
+	
+	int k = 0;
+	for(int i = 0; i < n; i++){
+		if(invSuffix[i] == n-1){
+			k = 0;
+			continue;
+		}
+		int j = suffix[invSuffix[i]+1];
+		while(i+k<n && j+k<n && p[i+k]==p[j+k]) k++;
+		lcp[invSuffix[i]] = k;
+		if(k)
+			k--;
+	}
+}
+	
+// Para LCS de muitas strings
+int sz[MAXN];
+int owner[MAXN], separators[MAXN];
+int words;
+
+void buildOwner(){
+	memset(owner, 0, sizeof owner);
+	for(int i = 0; i < n; i++){
+		if(separators[suffix[i]]){
+			owner[i] = -1;
+			continue;
+		}
+		for(int j = 0; j < words; j++)
+		if(suffix[i] < sz[j]){
+			owner[i] = j;
+			break;
+		}
+	}
+}
+	
+\end{lstlisting}
+\end{multicols}
 

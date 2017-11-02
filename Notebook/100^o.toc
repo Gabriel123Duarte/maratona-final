@@ -62,22 +62,25 @@
 \contentsline {section}{\numberline {5.7}Baby-Step Giant-Step para Logaritmo Discreto}{32}
 \contentsline {section}{\numberline {5.8}N\IeC {\'u}meros de Catalan}{32}
 \contentsline {section}{\numberline {5.9}F\IeC {\'o}rmulas \IeC {\'u}teis}{32}
-\contentsline {chapter}{\numberline {6}Processamento de Strings}{34}
-\contentsline {section}{\numberline {6.1}Aho-Corasick}{34}
-\contentsline {section}{\numberline {6.2}Rabin-Karp}{34}
-\contentsline {section}{\numberline {6.3}Repetend: menor per\IeC {\'\i }odo de uma string}{35}
-\contentsline {chapter}{\numberline {7}Geometria Computacional}{36}
-\contentsline {section}{\numberline {7.1}Template - J\IeC {\'u}nior}{36}
-\contentsline {section}{\numberline {7.2}Menor c\IeC {\'\i }rculo}{37}
-\contentsline {section}{\numberline {7.3}Kit de encolhimento - SBC 2016}{38}
-\contentsline {section}{\numberline {7.4}Intersec\IeC {\c c}\IeC {\~a}o c\IeC {\'\i }rculo e segmento}{39}
-\contentsline {section}{\numberline {7.5}Intersec\IeC {\c c}\IeC {\~a}o entre segmentos}{40}
-\contentsline {section}{\numberline {7.6}Closest pair problem}{40}
-\contentsline {section}{\numberline {7.7}\IeC {\'A}rea de uni\IeC {\~a}o de ret\IeC {\^a}ngulo}{41}
-\contentsline {chapter}{\numberline {8}Miscel\IeC {\^a}nea}{42}
-\contentsline {section}{\numberline {8.1}Datas}{42}
-\contentsline {section}{\numberline {8.2}Hash C++11}{42}
-\contentsline {section}{\numberline {8.3}Mo's}{42}
-\contentsline {section}{\numberline {8.4}Problema do histograma}{43}
-\contentsline {section}{\numberline {8.5}Sliding Window - Mediana}{43}
+\contentsline {section}{\numberline {5.10}Fast Fourier Transform - FFT}{33}
+\contentsline {section}{\numberline {5.11}Convolu\IeC {\c c}\IeC {\~a}o Circular}{34}
+\contentsline {chapter}{\numberline {6}Processamento de Strings}{35}
+\contentsline {section}{\numberline {6.1}Aho-Corasick}{35}
+\contentsline {section}{\numberline {6.2}Rabin-Karp}{35}
+\contentsline {section}{\numberline {6.3}Repetend: menor per\IeC {\'\i }odo de uma string}{36}
+\contentsline {section}{\numberline {6.4}Suffix Array}{36}
+\contentsline {chapter}{\numberline {7}Geometria Computacional}{38}
+\contentsline {section}{\numberline {7.1}Template - J\IeC {\'u}nior}{38}
+\contentsline {section}{\numberline {7.2}Menor c\IeC {\'\i }rculo}{39}
+\contentsline {section}{\numberline {7.3}Kit de encolhimento - SBC 2016}{40}
+\contentsline {section}{\numberline {7.4}Intersec\IeC {\c c}\IeC {\~a}o c\IeC {\'\i }rculo e segmento}{41}
+\contentsline {section}{\numberline {7.5}Intersec\IeC {\c c}\IeC {\~a}o entre segmentos}{42}
+\contentsline {section}{\numberline {7.6}Closest pair problem}{42}
+\contentsline {section}{\numberline {7.7}\IeC {\'A}rea de uni\IeC {\~a}o de ret\IeC {\^a}ngulo}{43}
+\contentsline {chapter}{\numberline {8}Miscel\IeC {\^a}nea}{44}
+\contentsline {section}{\numberline {8.1}Datas}{44}
+\contentsline {section}{\numberline {8.2}Hash C++11}{44}
+\contentsline {section}{\numberline {8.3}Mo's}{44}
+\contentsline {section}{\numberline {8.4}Problema do histograma}{45}
+\contentsline {section}{\numberline {8.5}Sliding Window - Mediana}{45}
 \select@language {english}
