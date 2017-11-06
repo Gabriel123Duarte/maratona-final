@@ -486,7 +486,7 @@ bool seg_circle_intersect(point p, point q, circle c)
 	\end{lstlisting}
 \end{multicols}
 
-\section{Intersecção entre segmentos}
+\section{Intersecção e distância entre segmentos}
 
 Código bem doido.
 \begin{multicols}{2}
@@ -542,6 +542,37 @@ bool gr( const pu &a1 , const pu &a2 , const pu &b1 , const pu &b2 ) {
 
 bool intersects( const pu &a1 , const pu &a2 , const pu &b1 , const pu &b2 ) {
 	return gr( a1 , a2 , b1 , b2) && gr( b1 , b2 , a1 , a2 ) ;; 
+}
+
+// Pra baixo eh distancia entre segmentos
+
+bool comp( double a, double b ){
+	return fabs( a - b ) > EPS ; //TODO < EPS?
+}
+
+struct P{
+double x, y;
+	P( double x= 0 , double y = 0 ) : x(x), y(y) {}
+	P operator + ( P in ) { return P(x + in.x, y + in.y ); } 
+	P operator - ( P in ) { return P(x - in.x, y - in.y ); } 
+	
+	double operator * ( P in ) { return x * in.x  + y * in.y ; } 
+	P operator / ( P in ) { double f = (P(x,y) * in)/(in*in); return P( in.x * f, in.y * f); }
+	double operator ! ( ) { return sqrt(x*x + y*y ); }
+};
+
+pu go( P & a) { return pu( a.x, a.y ); }
+
+double distSP(P a, P b, P c) {
+	if( !comp(a.x,b.x) && !comp(a.y,b.y) ) return !( c-a );
+	P pp = a + (c-a)/(b-a); 
+	if( !comp(!(a-pp) + !(pp-b), !(a-b)) ) return !( c-pp );
+	return min(!(a-c), !(b-c));
+}
+
+double distSS( P a, P b, P c, P d){
+	if( intersects( go(a), go(b), go(c), go(d)) ) return 0; 
+	return min(min(distSP(a,b,c), distSP(a,b,d)), min(distSP(c,d,a), distSP(c,d,b)));
 }
 
 	\end{lstlisting}
@@ -634,6 +665,21 @@ int union_area(event events_v[],event events_h[],int n,int e){
 		in_set[c.ind] = (c.type==0);//If it is a left edge, the rectangle is in the active set else not
 	}
 	return area;
+}
+
+\end{lstlisting}
+\end{multicols}
+
+\section{Distância entre segmento e ponto}
+Distância entre segmento e ponto
+\begin{multicols}{2}
+	\begin{lstlisting}
+
+Point operator-(P b){return P(x-b.x,y-b.y);}
+double len(){return hypot(x,y);}
+double cross(P a,P b){return a.x*b.y-a.y*b.x;}
+double dist(P p,P a,P b){ // P eh o ponto, a-b a reta
+	return cross(p-a,b-a)/(b-a).len();
 }
 
 \end{lstlisting}
