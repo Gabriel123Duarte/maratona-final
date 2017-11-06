@@ -238,32 +238,101 @@ ll grundy(int x){
 \end{multicols}
 
 \section{Baby-Step Giant-Step para Logaritmo Discreto}
-Resolve a equação $a^ = b(modm)$ em $O(sqrt(m)log m)$. Retorna -1 se não há solução.
+Resolve a equação $a^x = b(modm)$ em $O(sqrt(m)log m)$. Retorna -1 se não há solução.
 \begin{multicols}{2}
 \begin{lstlisting}
 template <typename T>
-T baby(T a, T b, T m){
+T baby (T a, T b, T m) {
 	a %= m; b %= m;
-	T n = (T)sqrt(m+0.0)+1;
+	T n = (T) sqrt (m + .0) + 1;
 	T an = 1;
-	for(T i = 0; i < n; i++)
-		an = (an*a)%m;
+	for (T i=0; i<n; ++i)
+		an = (an * a) % m;
 	map<T,T> vals;
-	for(T i = 1, cur = an; i <= n; i++){
-		if(!vals.count(cur))
-			vals[cur] = 1;
-		cur = (cur*an)%m;
+	for (T i=1, cur=an; i<=n; ++i) {
+		if (!vals.count(cur))
+			vals[cur] = i;
+		cur = (cur * an) % m;
 	}
-	for(T i = 0, cur = b; i <= n; i++){
-		if(!vals.count(cur)){
+	for (T i=0, cur=b; i<=n; ++i) {
+		if (vals.count(cur)) {
 			T ans = vals[cur] * n - i;
-			if(ans < m)
+			if (ans < m)
 				return ans;
-		}
-		cur = (cur * a) % m);
+			}
+			cur = (cur * a) % m;
 	}
 	return -1;
 }
+
+\end{lstlisting}
+\end{multicols}
+\section{Baby-Step Giant-Step FAST}
+Resolve a equação $a^x = b(modm)$ em $O(sqrt(m)log m)$. Retorna -1 se não há solução.
+\begin{multicols}{2}
+	\begin{lstlisting}
+class Hash
+{
+	static const int HASHMOD = 7679977;
+	int top, myhash[HASHMOD + 100], value[HASHMOD + 100], stack[1 << 16];
+	int locate(const int x) const
+	{
+		int h = x % HASHMOD;
+		while (myhash[h] != -1 && myhash[h] != x) ++h;
+		return h;
+	}
+	public:
+	Hash() : top(0) { memset(myhash, 0xFF, sizeof(myhash)); }
+	void insert(const int x, const int v)
+	{
+		const int h = locate(x);
+		if (myhash[h] == -1)
+		myhash[h] = x, value[h] = v, stack[++top] = h;
+	}
+	int get(const int x) const
+	{
+		const int h = locate(x);
+		return myhash[h] == x ? value[h] : -1;
+	}
+	void clear() { while (top) myhash[stack[top--]] = -1; }
+} myhash;
+
+struct Triple
+{
+	ll x, y, z;
+	Triple(const ll a, const ll b, const ll c) : x(a), y(b), z(c) { }
+};
+
+Triple ExtendedGCD(const ll a, const ll b)
+{
+	if (b == 0) return Triple(1, 0, a);
+	const Triple last = ExtendedGCD(b, a%b);
+	return Triple(last.y, last.x - a / b * last.y, last.z);
+}
+
+ll BabyStep(ll A, ll B, ll C)
+{
+	const int sqrtn = static_cast<int>(std::ceil(std::sqrt(C)));
+	ll base = 1;
+	myhash.clear();
+	for (int i = 0; i < sqrtn; ++i)
+	{
+		myhash.insert(base, i);
+		base = base*A % C;
+	}
+	ll i = 0, j = -1, D = 1;
+	for (; i < sqrtn; ++i)
+	{
+		Triple res = ExtendedGCD(D, C);
+		const int c = C / res.z;
+		res.x = (res.x * B / res.z % c + c) % c;
+		j = myhash.get(res.x);
+		if (j != -1) return i * sqrtn + j;
+		D = D * base % C;
+	}
+	return -1;
+}
+
 
 \end{lstlisting}
 \end{multicols}
@@ -387,8 +456,7 @@ void convolution (vector<base> a, vector<base> b, vector<base> & res) {
 \end{multicols}
 
 \section{Convolução Circular}
-
-	\begin{lstlisting}
+\begin{lstlisting}
 
 template <typename T>
 void circularconvolution(vector<T> a, vector<T> b, vector<T> & res) {
