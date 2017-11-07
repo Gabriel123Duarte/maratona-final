@@ -27,7 +27,7 @@
 \contentsline {section}{\numberline {2.12}Treap / Cartesian Tree}{15}
 \contentsline {section}{\numberline {2.13}Treap / Cartesian Tree Impl\IeC {\'\i }cita}{15}
 \contentsline {section}{\numberline {2.14}Sparse table}{16}
-\contentsline {section}{\numberline {2.15}Persistent Segment Tree}{16}
+\contentsline {section}{\numberline {2.15}Persistent Segment Tree}{17}
 \contentsline {section}{\numberline {2.16}Wavelet Tree}{17}
 \contentsline {chapter}{\numberline {3}Paradigmas}{19}
 \contentsline {section}{\numberline {3.1}Convex hull trick 1}{19}
@@ -35,7 +35,7 @@
 \contentsline {section}{\numberline {3.3}Convex hull trick 3 - Fully Dynamic}{20}
 \contentsline {section}{\numberline {3.4}Divide and conquer optimization}{20}
 \contentsline {section}{\numberline {3.5}Knuth optimization}{20}
-\contentsline {section}{\numberline {3.6}Otimiza\IeC {\c c}\IeC {\~a}o com bitmask}{20}
+\contentsline {section}{\numberline {3.6}Otimiza\IeC {\c c}\IeC {\~a}o com bitmask}{21}
 \contentsline {chapter}{\numberline {4}Grafos}{22}
 \contentsline {section}{\numberline {4.1}Ford Fulkerson}{22}
 \contentsline {section}{\numberline {4.2}Edmonds Karp}{22}
@@ -63,7 +63,7 @@
 \contentsline {section}{\numberline {5.8}Baby-Step Giant-Step FAST}{32}
 \contentsline {section}{\numberline {5.9}N\IeC {\'u}meros de Catalan}{33}
 \contentsline {section}{\numberline {5.10}F\IeC {\'o}rmulas \IeC {\'u}teis}{33}
-\contentsline {section}{\numberline {5.11}Fast Fourier Transform - FFT}{33}
+\contentsline {section}{\numberline {5.11}Fast Fourier Transform - FFT}{34}
 \contentsline {section}{\numberline {5.12}Convolu\IeC {\c c}\IeC {\~a}o Circular}{34}
 \contentsline {chapter}{\numberline {6}Processamento de Strings}{35}
 \contentsline {section}{\numberline {6.1}Aho-Corasick}{35}
